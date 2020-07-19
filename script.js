@@ -9,7 +9,7 @@ if (!('remove' in Element.prototype)) {
     };
   }
   //var token = process.env.APIMAPBOXTOKEN
-  mapboxgl.accessToken = '';
+  mapboxgl.accessToken = 'pk.eyJ1IjoiYWdvbWV6ZGV2IiwiYSI6ImNrY3Jhbnd4cjFjN2IycWxiZmI3M3BjbGYifQ.Fl2pUWgsw96zmmkFMmPvXg';
 
   var map = new mapboxgl.Map({
     container: 'map',
@@ -167,7 +167,7 @@ if (!('remove' in Element.prototype)) {
           ]
         },
         "properties": {
-          "heading":'Pioneers of the Sky, The Stinson School of Flying',
+          "heading":'Pioneers of the Sky',
           "name":"Andy and Yvette Benavides of Smart And Joe De La Cruz, Chris Montoya, and Jose Cosme",
           "image":"./image7.jpg",
           "phoneFormatted": "(301) 654-7336",
@@ -390,12 +390,9 @@ if (!('remove' in Element.prototype)) {
       /* Assign the `item` class to each listing for styling. */
       listing.className = 'item';
 
-
-
-  
       var name = listing.appendChild(document.createElement('div'))
       name.innerHTML  = prop.heading;
-
+      name.className = 'name';
       /* Add the link to the individual listing created above. */
       var link = listing.appendChild(document.createElement('a'));
       link.href = '#';
@@ -447,7 +444,7 @@ if (!('remove' in Element.prototype)) {
     /** Check if there is already a popup on the map and if so, remove it */
     if (popUps[0]) popUps[0].remove();
   
-    var popup = new mapboxgl.Popup({ closeOnClick: false })
+    var popup = new mapboxgl.Popup({ closeOnClick: true })
       .setLngLat(currentFeature.geometry.coordinates)
       .setHTML('<h3>Art Location</h3>' + '<img src=' + currentFeature.properties.image + '></img>' +
         '<h4>' + currentFeature.properties.address + '</h4>' + "Artist:" + '<h4>' + currentFeature.properties.name + '</h4>'

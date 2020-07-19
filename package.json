@@ -1,0 +1,24 @@
+{
+  "name": "artlocal",
+  "version": "1.0.0",
+  "description": "",
+  "main": "script.js",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "foundation-sites": "^6.6.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/agomez99/artlocal.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/agomez99/artlocal/issues"
+  },
+  "homepage": "https://github.com/agomez99/artlocal#readme"
+}

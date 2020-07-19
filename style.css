@@ -13,7 +13,6 @@ body {
     width: 33.3333%;
     margin-left:5%;
     font-size:20px;
-    white-space: normal;
 
   }
   
@@ -65,4 +64,11 @@ body {
 
   a{
     color:white;
+  }
+
+  .item{
+    margin-bottom: 20px;
+  }
+  .name{
+    font-size:25px;;
   }
