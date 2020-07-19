@@ -1,3 +1,6 @@
+
+
+
 if (!('remove' in Element.prototype)) {
     Element.prototype.remove = function() {
       if (this.parentNode) {
@@ -5,11 +8,9 @@ if (!('remove' in Element.prototype)) {
       }
     };
   }
-
+  //var token = process.env.APIMAPBOXTOKEN
   mapboxgl.accessToken = '';
-  /** 
-   * Add the map to the page
-  */
+
   var map = new mapboxgl.Map({
     container: 'map',
     style: 'mapbox://styles/mapbox/light-v10',

@@ -62,3 +62,7 @@ body {
   .mapboxgl-popup {
     padding-bottom: 50px;
   }
+
+  a{
+    color:white;
+  }
