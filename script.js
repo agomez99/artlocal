@@ -32,6 +32,7 @@ if (!('remove' in Element.prototype)) {
         },
         "properties": {
           "heading":"Blue Star",
+          "name":"none",
           "phoneFormatted": "(210) 354-3775",
           "phone": "2103543775",
           "address": "1414 S Alamo St",
@@ -53,6 +54,8 @@ if (!('remove' in Element.prototype)) {
         },
         "properties": {
          "heading":"La Veladora of Our Lady of Guadalupe ",
+         "name":"Jesse Trevino",
+         "image":"./image2.jpg",
           "phoneFormatted": "(202) 507-8357",
           "phone": "2025078357",
           "address": "1315 Guadalupe St",
@@ -75,6 +78,8 @@ if (!('remove' in Element.prototype)) {
         },
         "properties": {
           "heading":"Dream Song Tower ",
+          "name":"Ortiz Cruz",
+          "image":"./image3.jpg",
           "phoneFormatted": "(202) 387-9338",
           "phone": "2023879338",
           "address": "Interstate 35 Access Rd & S Zarzamora St",
@@ -96,6 +101,8 @@ if (!('remove' in Element.prototype)) {
         },
         "properties": {
          "heading":"The Torch of Friendship",
+         "name":"Sebastián",
+         "image":"./image4.jpg",
           "phoneFormatted": "(202) 337-9338",
           "phone": "2023379338",
           "address": "333 Losoya Street",
@@ -117,7 +124,9 @@ if (!('remove' in Element.prototype)) {
         },
         "properties": {
             "heading":"Crossroads of Enlightenment",
-          "phoneFormatted": "(202) 547-9338",
+            "name":" Angel Rodríguez–Díaz",
+            "image":"./image5.jpg",
+            "phoneFormatted": "(202) 547-9338",
           "phone": "2025479338",
           "address": "4400 Blanco Road ",
           "city": "San Antonio",
@@ -138,6 +147,8 @@ if (!('remove' in Element.prototype)) {
         },
         "properties": {
           "heading":"River Walk Mosaic Murals",
+          "name":"Oscar Alvarado ",
+          "image":"./image6.jpg",
           "address": "849 E Commerce",
           "city": "San Antonio",
           "country": "United States",
@@ -155,7 +166,9 @@ if (!('remove' in Element.prototype)) {
           ]
         },
         "properties": {
-            "heading":'Pioneers of the Sky, The Stinson School of Flying',
+          "heading":'Pioneers of the Sky, The Stinson School of Flying',
+          "name":"Andy and Yvette Benavides of Smart And Joe De La Cruz, Chris Montoya, and Jose Cosme",
+          "image":"./image7.jpg",
           "phoneFormatted": "(301) 654-7336",
           "phone": "3016547336",
           "address": "8410 Mission Road",
@@ -176,7 +189,9 @@ if (!('remove' in Element.prototype)) {
           ]
         },
         "properties": {
-            "heading": "Powder",
+          "heading": "Powder",
+          "name":"Daniel Eime",
+          "image":"./image8.jpg",
           "phoneFormatted": "(571) 203-0082",
           "phone": "5712030082",
           "address": "502 Burnet St",
@@ -198,6 +213,8 @@ if (!('remove' in Element.prototype)) {
         },
         "properties": {
             "heading":"Red Bird",
+            "name":"Michael Lance",
+            "image":"./image9.jpg",
           "phoneFormatted": "(703) 522-2016",
           "phone": "7035222016",
           "address": "204 Augusta",
@@ -219,6 +236,8 @@ if (!('remove' in Element.prototype)) {
         },
         "properties": {
          "heading":"Maverick Tile Mural",
+         "name":"Ethel Wilson Harris ",
+         "image":"./image10.jpg",
           "phoneFormatted": "(610) 642-9400",
           "phone": "6106429400",
           "address": "Riverwalk- North of Lexington St. Bridge",
@@ -233,12 +252,14 @@ if (!('remove' in Element.prototype)) {
         "geometry": {
           "type": "Point",
           "coordinates": [
-            98.483700333999,
+            -98.483700333999,
             29.419425
           ]
         },
         "properties": {
         "heading":"Some Things I've Experienced in South Texas",
+        "name":"Alex Deleon",
+        "image":"./image11.jpg",
           "phoneFormatted": "(215) 386-1365",
           "phone": "2153861365",
           "address": "600 Hemisfair Park",
@@ -259,6 +280,8 @@ if (!('remove' in Element.prototype)) {
         },
         "properties": {
         "heading":"Canopy",
+        "name":"Joey Fauerso",
+        "image":"./image12.jpg",
           "phoneFormatted": "(202) 331-3355",
           "phone": "2023313355",
           "address": "729 Fulton Ave",
@@ -366,15 +389,19 @@ if (!('remove' in Element.prototype)) {
       /* Assign the `item` class to each listing for styling. */
       listing.className = 'item';
 
+
+
+  
+      var name = listing.appendChild(document.createElement('div'))
+      name.innerHTML  = prop.heading;
+
       /* Add the link to the individual listing created above. */
       var link = listing.appendChild(document.createElement('a'));
       link.href = '#';
       link.className = 'title';
       link.id = "link-" + prop.id;
       link.innerHTML = prop.address;
-  
-      var name = listing.appendChild(document.createElement('div'))
-      name.innerHTML  = prop.heading;
+
       /* Add details to the individual listing. */
     //   var details = listing.appendChild(document.createElement('div'));
 
@@ -421,8 +448,10 @@ if (!('remove' in Element.prototype)) {
   
     var popup = new mapboxgl.Popup({ closeOnClick: false })
       .setLngLat(currentFeature.geometry.coordinates)
-      .setHTML('<h3>Art Locationj</h3>' +
-        '<h4>' + currentFeature.properties.address + '</h4>')
+      .setHTML('<h3>Art Location</h3>' + '<img src=' + currentFeature.properties.image + '></img>' +
+        '<h4>' + currentFeature.properties.address + '</h4>' + "Artist:" + '<h4>' + currentFeature.properties.name + '</h4>'
+
+      )
       .addTo(map);
   }
 
