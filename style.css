@@ -1,35 +1,39 @@
 body {
-    background: #8c73bb;
     color: #000000;
     font: 400 15px/22px 'Source Sans Pro', 'Helvetica Neue', Sans-serif;
-    margin: 0;
-    padding: 0;
     -webkit-font-smoothing: antialiased;
   }
   
   /* The page is split between map and sidebar - the sidebar gets 1/3, map
   gets 2/3 of the page. You can adjust this to your personal liking. */
-  .sidebar {
-    width: 33.3333%;
-    margin-left:5%;
+  .menu{
+    background: #8c73bb;
+
+  }
+  .sidebar, .listings {
+    width: 100%;
     font-size:20px;
+    background: #8c73bb;
 
   }
   
   .map {
     border-left: 1px solid #fff;
     position: absolute;
-    left: 33.3333%;
-    width: 66.6666%;
+    height:700px;
+    width:500px;
+    right: 3%;
+    width: 100%;
     top: 0;
     bottom: 0;
   }
   
   .pad2 {
-    padding: 20px;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
+    background: #8c73bb;
+
   }
 
   ::-webkit-scrollbar-thumb {

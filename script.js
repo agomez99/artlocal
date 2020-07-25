@@ -11,10 +11,10 @@ if (!('remove' in Element.prototype)) {
 
   var map = new mapboxgl.Map({
     container: 'map',
-    style: 'mapbox://styles/mapbox/light-v10',
+    style: 'mapbox://styles/mapbox/streets-v11',
     center: [-98.491142, 29.424349],
     zoom: 12,
-    scrollZoom: false
+    scrollZoom:true
   });
 
   var stores = {
@@ -445,7 +445,7 @@ if (!('remove' in Element.prototype)) {
   function flyToStore(currentFeature) {
     map.flyTo({
       center: currentFeature.geometry.coordinates,
-      zoom: 15
+      zoom: 14
     });
   }
   function createPopUp(currentFeature) {
@@ -453,7 +453,9 @@ if (!('remove' in Element.prototype)) {
     /** Check if there is already a popup on the map and if so, remove it */
     if (popUps[0]) popUps[0].remove();
   
-    var popup = new mapboxgl.Popup({ closeOnClick: true })
+    var popup = new mapboxgl.Popup({ 
+      closeOnClick: true
+         })
       .setLngLat(currentFeature.geometry.coordinates)
       .setHTML('<h3>Art Location</h3>' + '<img src=' + currentFeature.properties.image + '></img>' + 
         '<h4>' + currentFeature.properties.address + '</h4>' + "Artist:" + '<h4>' + currentFeature.properties.name + '</h4>' + 

@@ -1,36 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v1.11.1/mapbox-gl.js'></script>
-<link href='https://api.tiles.mapbox.com/mapbox-gl-js/v1.11.1/mapbox-gl.css' rel='stylesheet' />
-<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700' rel='stylesheet'>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.6.3/dist/css/foundation.min.css" integrity="sha256-ogmFxjqiTMnZhxCqVmcqTvjfe1Y/ec4WaRj/aQPvn+I=" crossorigin="anonymous">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v1.11.1/mapbox-gl.js'></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+  <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v1.11.1/mapbox-gl.css' rel='stylesheet' />
+  <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700' rel='stylesheet'>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.6.3/dist/css/foundation.min.css"
+    integrity="sha256-ogmFxjqiTMnZhxCqVmcqTvjfe1Y/ec4WaRj/aQPvn+I=" crossorigin="anonymous">
 
 
 
-<link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css">
 
-<title>Document</title>
+  <title>Document</title>
 </head>
-<body>
-    <ul class="menu">
-        <li><a href="#"><button type="button" class="success button">buton</button></a></li>
-        <li><a href="#"><button type="button" class="success button">button</button></a></li>
-        <li><a href="#"><button type="button" class="success button">button</button></a></li>
-        <li><a href="#"><button type="button" class="success button">Save</button>
-        </a></li>
-      </ul>
-    <div class='sidebar pad2'>Listing</div>
-<div id='map' class='map pad2'>Map</div>
-<div class='sidebar'>
-    <div class='heading'>
 
-      <h1>San Antonio Public Art </h1>
-    </div>
-    <div id='listings' class='listings'>
-        <hr>
+<body>
+
+  <nav>
+    <ul class="menu">
+      <li><a href="#"><button type="button" class="success button">buton</button></a></li>
+      <li><a href="#"><button type="button" class="success button">button</button></a></li>
+      <li><a href="#"><button type="button" class="success button">button</button></a></li>
+      <li><a href="#"><button type="button" class="success button">Save</button>
+        </a></li>
+    </ul>
+  </nav>
+
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-sm-6">
+        <div id='map' class='map pad2'>Map</div>
+
+      </div>
+      <div class="col-6">
+        <h1  class='listings'>San Antonio Public Art </h1>
+        <div id='listings' class='listings'> </div>
+
+        <div class='sidebar'>
+          <div class='heading'>
+
+          </div>
+        </div>
+      </div>
+
+
+
+      <hr>
     </div>
   </div>
 </body>
@@ -38,4 +59,5 @@
 <script src="js/vendor/jquery.js"></script>
 <script src="js/vendor/what-input.js"></script>
 <script src="js/vendor/foundation.min.js"></script>
+
 </html>
