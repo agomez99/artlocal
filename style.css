@@ -10,17 +10,21 @@ body {
     background: #8c73bb;
 
   }
-  .sidebar, .listings {
+  .sidebar {
     width: 100%;
     font-size:20px;
     background: #8c73bb;
 
   }
-  
+  .listings{
+    width: 100%;
+    font-size:20px;
+    background: #8c73bb;
+  }
   .map {
     border-left: 1px solid #fff;
     position: absolute;
-    height:700px;
+    height:100%;
     width:500px;
     right: 3%;
     width: 100%;
