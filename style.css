@@ -6,13 +6,22 @@ body {
 #btn{
     border-radius:2px;
     color:white;
-    background-color:rgb(190, 54, 190);
+    background-color:rgb(241, 72, 241);
   }
   /* The page is split between map and sidebar - the sidebar gets 1/3, map
   gets 2/3 of the page. You can adjust this to your personal liking. */
   .menu{
     background: #8c73bb;
+    font-size:25px;
+    padding-top: 25px;
+    padding-bottom:30px;
+  }
 
+  .menu :hover{
+    color:rgb(108, 14, 170);
+    text-decoration: overline;
+    font-size:30px;
+    font-weight: bold;
   }
   .sidebar {
     width: 100%;
