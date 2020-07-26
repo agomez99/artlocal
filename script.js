@@ -9,6 +9,9 @@ if (!('remove' in Element.prototype)) {
   //var token = process.env.APIMAPBOXTOKEN
   mapboxgl.accessToken = 'pk.eyJ1IjoiYWdvbWV6ZGV2IiwiYSI6ImNrY3Jhbnd4cjFjN2IycWxiZmI3M3BjbGYifQ.Fl2pUWgsw96zmmkFMmPvXg';
 
+
+
+  
   var map = new mapboxgl.Map({
     container: 'map',
     style: 'mapbox://styles/mapbox/streets-v11',
@@ -54,7 +57,7 @@ if (!('remove' in Element.prototype)) {
         "properties": {
          "heading":"La Veladora of Our Lady of Guadalupe ",
          "name":"Jesse Trevino",
-         "image":"./image2.jpg",
+         "image":"./images/image2.jpg",
          "info": "https://www.getcreativesanantonio.com/Public-Art/Public-Artworks-Map/Public-Artworks-List/Public-Artwork/Article/287/La-Veladora-of-Our-Lady-of-Guadalupe",
           "phoneFormatted": "(202) 507-8357",
           "phone": "2025078357",
@@ -79,7 +82,7 @@ if (!('remove' in Element.prototype)) {
         "properties": {
           "heading":"Dream Song Tower ",
           "name":"Ortiz Cruz",
-          "image":"./image3.jpg",
+          "image":"./images/image3.jpg",
           "info" : "https://www.getcreativesanantonio.com/Public-Art/Public-Artworks-Map/Public-Artworks-List/Public-Artwork/Article/742/Dream-Song-Tower",
           "phoneFormatted": "(202) 387-9338",
           "phone": "2023879338",
@@ -104,7 +107,7 @@ if (!('remove' in Element.prototype)) {
          "heading":"The Torch of Friendship",
          "info" : "https://www.getcreativesanantonio.com/Public-Art/Public-Artworks-Map/Public-Artworks-List/Public-Artwork/Article/165/Torch-of-Friendship-Antorcha-de-Amistad",
          "name":"Sebastián",
-         "image":"./image4.jpg",
+         "image":"./images/image4.jpg",
           "phoneFormatted": "(202) 337-9338",
           "phone": "2023379338",
           "address": "333 Losoya Street",
@@ -127,7 +130,7 @@ if (!('remove' in Element.prototype)) {
         "properties": {
             "heading":"Crossroads of Enlightenment",
             "name":" Angel Rodríguez–Díaz",
-            "image":"./image5.jpg",
+            "image":"./images/image5.jpg",
             "info": "https://www.getcreativesanantonio.com/Public-Art/Public-Artworks-Map/Public-Artworks-List/Public-Artwork/Article/380/Crossroads-of-Enlightenment",
             "phoneFormatted": "(202) 547-9338",
           "phone": "2025479338",
@@ -151,7 +154,7 @@ if (!('remove' in Element.prototype)) {
         "properties": {
           "heading":"River Walk Mosaic Murals",
           "name":"Oscar Alvarado ",
-          "image":"./image6.jpg",
+          "image":"./images/image6.jpg",
           "info": "https://www.getcreativesanantonio.com/Public-Art/Public-Artworks-Map/Public-Artworks-List/Public-Artwork/Article/164/River-Walk-Mosaic-Murals",
           "address": "849 E Commerce",
           "city": "San Antonio",
@@ -172,7 +175,7 @@ if (!('remove' in Element.prototype)) {
         "properties": {
           "heading":'Pioneers of the Sky',
           "name":"Andy and Yvette Benavides of Smart And Joe De La Cruz, Chris Montoya, and Jose Cosme",
-          "image":"./image7.jpg",
+          "image":"./images/image7.jpg",
           "info": "",
           "phoneFormatted": "(301) 654-7336",
           "phone": "3016547336",
@@ -196,7 +199,7 @@ if (!('remove' in Element.prototype)) {
         "properties": {
           "heading": "Powder",
           "name":"Daniel Eime",
-          "image":"./image8.jpg",
+          "image":"./images/image8.jpg",
           "info": "https://www.getcreativesanantonio.com/Public-Art/Public-Artworks-Map/Public-Artworks-List/Public-Artwork/Article/762/Powder",
           "phoneFormatted": "(571) 203-0082",
           "phone": "5712030082",
@@ -220,7 +223,7 @@ if (!('remove' in Element.prototype)) {
         "properties": {
             "heading":"Red Bird",
             "name":"Michael Lance",
-            "image":"./image9.jpg",
+            "image":"./images/image9.jpg",
             "info": "https://www.getcreativesanantonio.com/Public-Art/Public-Artworks-Map/Public-Artworks-List/Public-Artwork/Article/284/Red-Bird",
           "phoneFormatted": "(703) 522-2016",
           "phone": "7035222016",
@@ -244,7 +247,7 @@ if (!('remove' in Element.prototype)) {
         "properties": {
          "heading":"Maverick Tile Mural",
          "name":"Ethel Wilson Harris ",
-         "image":"./image10.jpg",
+         "image":"./images/image10.jpg",
          "info": "",
           "phoneFormatted": "(610) 642-9400",
           "phone": "6106429400",
@@ -267,7 +270,7 @@ if (!('remove' in Element.prototype)) {
         "properties": {
         "heading":"Some Things I've Experienced in South Texas",
         "name":"Alex Deleon",
-        "image":"./image11.jpg",
+        "image":"./images/image11.jpg",
         "info": "https://www.getcreativesanantonio.com/Public-Art/Public-Artworks-Map/Public-Artworks-List/Public-Artwork/Article/160/Maverick-Tile-Mural",
           "phoneFormatted": "(215) 386-1365",
           "phone": "2153861365",
@@ -290,7 +293,7 @@ if (!('remove' in Element.prototype)) {
         "properties": {
         "heading":"Canopy",
         "name":"Joey Fauerso",
-        "image":"./image12.jpg",
+        "image":"./images/image12.jpg",
         "info": "https://www.getcreativesanantonio.com/Public-Art/Public-Artworks-Map/Public-Artworks-List/Public-Artwork/Article/721/Canopy",
           "phoneFormatted": "(202) 331-3355",
           "phone": "2023313355",
