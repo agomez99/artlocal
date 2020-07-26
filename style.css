@@ -26,7 +26,6 @@ body {
   .sidebar {
     width: 100%;
     font-size:20px;
-    background: #8c73bb;
 
   }
   .listings{
@@ -54,7 +53,6 @@ body {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
-    background: #8c73bb;
 
   }
 
