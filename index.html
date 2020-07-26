@@ -7,7 +7,7 @@
   <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v1.11.1/mapbox-gl.js'></script>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
     integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-
+    <link href="https://fonts.googleapis.com/css2?family=Jaldi&family=Spartan&display=swap" rel="stylesheet">
   <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v1.11.1/mapbox-gl.css' rel='stylesheet' />
   <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700' rel='stylesheet'>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.6.3/dist/css/foundation.min.css"
@@ -30,15 +30,16 @@
     <ul class="menu">
       <li><a href="#"><button type="button" class="success button">buton</button></a></li>
       <li><a href="#"><button type="button" class="success button">button</button></a></li>
-      <li><a href="#"><button type="button" class="success button">button</button></a></li>
+      <li><a href="#map"><button type="button" class="success button">Art Map</button></a></li>
       <li><a href="details.html"><button type="button" class="success button">local artist</button>
         </a></li>
     </ul>
   </nav>
   <div class="container-banner">
+
     <img src="./images/banner.jpg" alt="Snow" style="width:100%;">
     <div class="centered">
-      <h1>Public Art of San Antonio</h1>
+      <h1 className='banner-text'>Public Art of San Antonio</h1>
     </div>
 
   </div>
@@ -104,11 +105,10 @@
     <div class="row">
       <div class="col-sm-7">
         <div id='map' class='map pad2'>Map</div>
-
       </div>
       <div class="col-4">
         <div id='listings' class='listings'>
-          <h1>San Antonio Public Art </h1>
+          <h2>San Antonio Public Art </h2>
         </div>
         </div>
       </div>
@@ -121,10 +121,10 @@
 </body>
 <script>
   var swiper = new Swiper('.swiper-container', {
-    spaceBetween: 30,
+    spaceBetween: 10,
     centeredSlides: true,
     autoplay: {
-      delay: 4500,
+      delay: 4700,
       disableOnInteraction: false,
     },
     pagination: {
