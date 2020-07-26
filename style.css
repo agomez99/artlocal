@@ -115,7 +115,10 @@ body {
     margin-left:15%;
 
   }
+.card-divider{
+  background-color: #8c73bb;
 
+}
   .container-banner{
     height: auto;
     border-radius: 25px;
