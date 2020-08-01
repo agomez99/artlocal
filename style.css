@@ -8,6 +8,25 @@ body {
   color: white;
   background-color: rgb(241, 72, 241);
 }
+
+
+.name{
+  color:white;
+  display: inline-block;
+  padding-right: 10px;
+
+}
+
+.artist{
+  color:white;
+}
+
+.address{
+  display: inline;
+  color:white;
+}
+
+
 /* The page is split between map and sidebar - the sidebar gets 1/3, map
   gets 2/3 of the page. You can adjust this to your personal liking. */
 .menu {
@@ -114,7 +133,12 @@ a {
   -webkit-align-items: center;
   align-items: center;
 }
+.center {
+  position: absolute;
+  top: 20%;
 
+  transform: translate(-50%, -50%);
+}
 .card {
   left: 15%;
 }
@@ -183,8 +207,18 @@ p {
   font-size: 25px;
   padding-top: 10px;
   margin-right: 15%;
+  
 }
 h3{
   text-align: center;
-  
+
+}
+
+.artname{
+  font-size: 2vw;
+  color:white;
+
+  background-color: black;
+  font:  "Source Sans Pro", "Helvetica Neue", Sans-serif;
+  display:inline-flex;
 }

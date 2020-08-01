@@ -356,8 +356,9 @@ if (!('remove' in Element.prototype)) {
        * Create a marker using the div element
        * defined above and add it to the map.
       **/
-      new mapboxgl.Marker(el, { offset: [0, -23] })
+      new mapboxgl.Marker(el, { offset: [0, -10] })
         .setLngLat(marker.geometry.coordinates)
+        //.setOffset(offset)
         .addTo(map);
 
       /**
@@ -402,9 +403,16 @@ if (!('remove' in Element.prototype)) {
       /* Assign the `item` class to each listing for styling. */
       listing.className = 'item';
 
+
+
+
       var name = listing.appendChild(document.createElement('div'))
       name.innerHTML  = prop.heading;
-      name.className = 'name';
+      name.className = 'name' ;
+
+
+
+
       /* Add the link to the individual listing created above. */
       var link = listing.appendChild(document.createElement('a'));
       link.href = '#';
@@ -412,6 +420,13 @@ if (!('remove' in Element.prototype)) {
       link.id = "link-" + prop.id;
       link.innerHTML = prop.address;
 
+
+
+      
+
+      var artist = listing.appendChild(document.createElement('div'))
+      artist.innerHTML  = prop.name;
+      artist.className = 'artist' ;
       /* Add details to the individual listing. */
     //   var details = listing.appendChild(document.createElement('div'));
 
@@ -455,13 +470,26 @@ if (!('remove' in Element.prototype)) {
     var popUps = document.getElementsByClassName('mapboxgl-popup');
     /** Check if there is already a popup on the map and if so, remove it */
     if (popUps[0]) popUps[0].remove();
-  
+
+    var markerHeight = 50, markerRadius = 10, linearOffset = 25;
+    var popupOffsets = {
+    'top': [0, 0],
+    'top-left': [0,0],
+    'top-right': [0,0],
+    'bottom': [0, -markerHeight],
+    'bottom-left': [linearOffset, (markerHeight - markerRadius + linearOffset) * -1],
+    'bottom-right': [-linearOffset, (markerHeight - markerRadius + linearOffset) * -1],
+    'left': [markerRadius, (markerHeight - markerRadius) * -1],
+    'right': [-markerRadius, (markerHeight - markerRadius) * -1]
+    };
+
     var popup = new mapboxgl.Popup({ 
-      closeOnClick: true
-         })
+      closeOnClick: true,
+      offset: popupOffsets
+        })
       .setLngLat(currentFeature.geometry.coordinates)
       .setHTML('<h3>Art Location</h3>' + '<img src=' + currentFeature.properties.image + '></img>' + 
-        '<h4>' + currentFeature.properties.address + '</h4>' + "Artist:" + '<h4>' + currentFeature.properties.name + '</h4>' + 
+        '<h4>' + currentFeature.properties.address + '</h4>' + "Artist:" + '<h4>' +  currentFeature.properties.name + '</h4>' + 
          '<a href='+ currentFeature.properties.info +'><button type="button" class="success button">More Info</button>'
 
 
