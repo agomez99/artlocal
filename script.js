@@ -463,7 +463,7 @@ if (!('remove' in Element.prototype)) {
   function flyToStore(currentFeature) {
     map.flyTo({
       center: currentFeature.geometry.coordinates,
-      zoom: 14
+      zoom: 12
     });
   }
   function createPopUp(currentFeature) {
@@ -488,7 +488,7 @@ if (!('remove' in Element.prototype)) {
       offset: popupOffsets
         })
       .setLngLat(currentFeature.geometry.coordinates)
-      .setHTML('<h3>Art Location</h3>' + '<img src=' + currentFeature.properties.image + '></img>' + 
+      .setHTML('<h3>location</h3>' + '<img src=' + currentFeature.properties.image + '></img>' + 
         '<h4>' + currentFeature.properties.address + '</h4>' + "Artist:" + '<h4>' +  currentFeature.properties.name + '</h4>' + 
          '<a href='+ currentFeature.properties.info +'><button type="button" class="success button">More Info</button>'
 
