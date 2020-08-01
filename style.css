@@ -135,7 +135,7 @@ a {
 }
 .center {
   position: absolute;
-  top: 20%;
+  top: 10%;
 
   transform: translate(-50%, -50%);
 }
@@ -217,7 +217,9 @@ h3{
 .artname{
   font-size: 2vw;
   color:white;
-
+  text-shadow: 2px 2px #a200ff;
+  border-radius: 25px;
+padding:5px;
   background-color: black;
   font:  "Source Sans Pro", "Helvetica Neue", Sans-serif;
   display:inline-flex;
