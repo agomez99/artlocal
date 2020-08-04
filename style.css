@@ -12,17 +12,15 @@ body {
 
 .name{
   color:white;
-  display: inline-block;
   padding-right: 10px;
 
 }
 
 .artist{
-  color:white;
+  color:rgb(0, 0, 0);
 }
 
 .address{
-  display: inline;
   color:white;
 }
 
@@ -193,11 +191,6 @@ h1 {
 
 }
 
-
-
-a {
-  color: black;
-}
 
 p {
   font: "Source Sans Pro", "Helvetica Neue", Sans-serif;

@@ -405,20 +405,20 @@ if (!('remove' in Element.prototype)) {
 
 
 
-
-      var name = listing.appendChild(document.createElement('div'))
-      name.innerHTML  = prop.heading;
-      name.className = 'name' ;
-
-
-
-
       /* Add the link to the individual listing created above. */
       var link = listing.appendChild(document.createElement('a'));
       link.href = '#';
       link.className = 'title';
       link.id = "link-" + prop.id;
       link.innerHTML = prop.address;
+
+
+
+
+      var name = listing.appendChild(document.createElement('div'))
+      name.innerHTML  = prop.heading;
+      name.className = 'name' ;
+
 
 
 
