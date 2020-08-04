@@ -214,3 +214,24 @@ padding:5px;
   font:  "Source Sans Pro", "Helvetica Neue", Sans-serif;
   display:inline;
 }
+
+.about-hdr{
+  text-align:center;
+  color:white;
+}
+
+.about-div{
+  background-color:#8c73bb;
+  margin-top: 10px;
+  margin-left:10%;
+  border-radius:15px;
+  margin-top:5%;
+}
+.about-p{
+  margin-left:5%;
+  margin-right:5%;
+  padding:10px;
+  color:white;
+  font-family: "Spartan", sans-serif;
+
+}
