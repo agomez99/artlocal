@@ -136,7 +136,7 @@ a {
 .center {
   position: absolute;
   top: 10%;
-
+  right:10%;
   transform: translate(-50%, -50%);
 }
 .card {
@@ -219,5 +219,5 @@ h3{
 padding:5px;
   background-color: black;
   font:  "Source Sans Pro", "Helvetica Neue", Sans-serif;
-  display:inline-flex;
+  display:inline;
 }
