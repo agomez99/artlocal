@@ -9,21 +9,18 @@ body {
   background-color: rgb(241, 72, 241);
 }
 
-
-.name{
-  color:white;
+.name {
+  color: white;
   padding-right: 10px;
-
 }
 
-.artist{
-  color:rgb(0, 0, 0);
+.artist {
+  color: rgb(0, 0, 0);
 }
 
-.address{
-  color:white;
+.address {
+  color: white;
 }
-
 
 /* The page is split between map and sidebar - the sidebar gets 1/3, map
   gets 2/3 of the page. You can adjust this to your personal liking. */
@@ -134,7 +131,7 @@ a {
 .center {
   position: absolute;
   top: 10%;
-  right:10%;
+  right: 10%;
   transform: translate(-50%, -50%);
 }
 .card {
@@ -181,57 +178,74 @@ h1 {
   height: 300px;
 }
 .grid-x {
-  margin-top:20px;
+  margin-top: 20px;
   padding-bottom: 100px;
   margin-left: 10%;
   background-color: #bba5e4;
   margin-right: 10%;
-  padding:15px;
+  padding: 15px;
   border-radius: 25px;
-
 }
-
 
 p {
   font: "Source Sans Pro", "Helvetica Neue", Sans-serif;
   font-size: 25px;
-  padding-top: 10px;
   margin-right: 15%;
-  
+  margin-bottom: 0em;
 }
-h3{
+h3 {
   text-align: center;
-
 }
 
-.artname{
+.artname {
   font-size: 2vw;
-  color:white;
+  color: white;
   text-shadow: 2px 2px #a200ff;
   border-radius: 25px;
-padding:5px;
+  padding: 5px;
   background-color: black;
-  font:  "Source Sans Pro", "Helvetica Neue", Sans-serif;
-  display:inline;
+  font: "Source Sans Pro", "Helvetica Neue", Sans-serif;
+  display: inline;
 }
 
-.about-hdr{
-  text-align:center;
-  color:white;
+.about-hdr {
+  text-align: center;
+  color: white;
 }
 
-.about-div{
-  background-color:#8c73bb;
+.about-div {
+  background-color: #8c73bb;
   margin-top: 10px;
-  margin-left:10%;
-  border-radius:15px;
-  margin-top:5%;
+  margin-left: 10%;
+  border-radius: 15px;
+  margin-top: 5%;
 }
-.about-p{
-  margin-left:5%;
-  margin-right:5%;
-  padding:10px;
-  color:white;
+.about-p {
+  margin-left: 5%;
+  margin-right: 5%;
+  padding: 10px;
+  color: white;
   font-family: "Spartan", sans-serif;
+}
+.mapboxgl-popup-content {
+  display: block;
 
+
+}
+
+.map-img {
+  height: 200px;
+}
+
+.map-artist {
+  font-size: 20px;
+}
+
+.map-address {
+  font-size: 20px;
+}
+
+#success-btn {
+  border-radius: 25px;
+  margin: 0;
 }

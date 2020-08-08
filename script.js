@@ -421,9 +421,6 @@ if (!('remove' in Element.prototype)) {
 
 
 
-
-      
-
       var artist = listing.appendChild(document.createElement('div'))
       artist.innerHTML  = prop.name;
       artist.className = 'artist' ;
@@ -471,7 +468,7 @@ if (!('remove' in Element.prototype)) {
     /** Check if there is already a popup on the map and if so, remove it */
     if (popUps[0]) popUps[0].remove();
 
-    var markerHeight = 50, markerRadius = 10, linearOffset = 25;
+    var markerHeight = markerRadius = 100, linearOffset = 25;
     var popupOffsets = {
     'top': [0, 0],
     'top-left': [0,0],
@@ -485,12 +482,12 @@ if (!('remove' in Element.prototype)) {
 
     var popup = new mapboxgl.Popup({ 
       closeOnClick: true,
-      offset: popupOffsets
-        })
+      offset: [100, -200],
+    })
       .setLngLat(currentFeature.geometry.coordinates)
-      .setHTML('<h3>location</h3>' + '<img src=' + currentFeature.properties.image + '></img>' + 
-        '<h4>' + currentFeature.properties.address + '</h4>' + "Artist:" + '<h4>' +  currentFeature.properties.name + '</h4>' + 
-         '<a href='+ currentFeature.properties.info +'><button type="button" class="success button">More Info</button>'
+      .setHTML('<img  class="map-img" src=' + currentFeature.properties.image + '></img>' + 
+        '<p class="map-address">' + currentFeature.properties.address + '</p>' + "Artist:" + '<p class="map-artist">' +  currentFeature.properties.name + '</p>' + 
+         '<a href='+ currentFeature.properties.info +'><button type="button" id=success-btn class="success button">More Info</button>'
 
 
       )
