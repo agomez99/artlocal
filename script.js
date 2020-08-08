@@ -16,7 +16,7 @@ if (!('remove' in Element.prototype)) {
     container: 'map',
     style: 'mapbox://styles/mapbox/streets-v11',
     center: [-98.491142, 29.424349],
-    zoom: 12,
+    zoom: 11,
     scrollZoom:true
   });
 
@@ -476,6 +476,7 @@ if (!('remove' in Element.prototype)) {
 
     var popup = new mapboxgl.Popup({ 
       closeOnClick: true,
+
       offset: [100, -200],
     })
       .setLngLat(currentFeature.geometry.coordinates)
