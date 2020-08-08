@@ -460,7 +460,11 @@ if (!('remove' in Element.prototype)) {
   function flyToStore(currentFeature) {
     map.flyTo({
       center: currentFeature.geometry.coordinates,
-      zoom: 12
+      bearing: 0,
+      curve: 0.9,
+      speed: 0.8, // make the flying slow
+      zoom: 14
+
     });
   }
   function createPopUp(currentFeature) {
@@ -468,17 +472,7 @@ if (!('remove' in Element.prototype)) {
     /** Check if there is already a popup on the map and if so, remove it */
     if (popUps[0]) popUps[0].remove();
 
-    var markerHeight = markerRadius = 100, linearOffset = 25;
-    var popupOffsets = {
-    'top': [0, 0],
-    'top-left': [0,0],
-    'top-right': [0,0],
-    'bottom': [0, -markerHeight],
-    'bottom-left': [linearOffset, (markerHeight - markerRadius + linearOffset) * -1],
-    'bottom-right': [-linearOffset, (markerHeight - markerRadius + linearOffset) * -1],
-    'left': [markerRadius, (markerHeight - markerRadius) * -1],
-    'right': [-markerRadius, (markerHeight - markerRadius) * -1]
-    };
+
 
     var popup = new mapboxgl.Popup({ 
       closeOnClick: true,
