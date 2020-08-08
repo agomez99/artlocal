@@ -90,9 +90,7 @@ body {
   background-color: rgba(0, 0, 0, 0);
 }
 
-.mapboxgl-popup {
-  padding-bottom: 50px;
-}
+
 
 a {
   color: white;
@@ -107,12 +105,14 @@ a {
 .swiper-container {
   width: 100%;
   height: 800px;
+
 }
 
 .swiper-slide {
   text-align: center;
   font-size: 18px;
   background: rgb(8, 8, 8);
+  border-radius: 25px;
 
   /* Center slide text vertically */
   display: -webkit-box;
@@ -190,7 +190,6 @@ h1 {
 p {
   font: "Source Sans Pro", "Helvetica Neue", Sans-serif;
   font-size: 25px;
-  margin-right: 15%;
   margin-bottom: 0em;
 }
 h3 {
@@ -231,10 +230,10 @@ h3 {
   display: block;
 }
 
-.mapboxgl-popup-close-button{
-
+.mapboxgl-popup-close-button {
+  font-size: 3rem;
+  color:rgb(0, 0, 0);
 }
-
 
 
 .map-img {
@@ -243,13 +242,18 @@ h3 {
 
 .map-artist {
   font-size: 20px;
+  text-align: center;
 }
 
 .map-address {
   font-size: 20px;
+  text-align: center;
+
 }
 
 #success-btn {
   border-radius: 25px;
-  margin: 0;
+  text-align: center;
+  margin-left: 20%;
+  margin-right:20%;
 }
