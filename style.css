@@ -8,7 +8,10 @@ body {
   color: white;
   background-color: rgb(241, 72, 241);
 }
-
+.container-banner{
+  display: block;
+  text-align: center;
+}
 .name {
   color: white;
   padding-right: 10px;
@@ -156,7 +159,6 @@ a {
 
 #title{
   text-align: center;
-  margin-top: 5%;
   color: rgb(0, 0, 0);
   margin-left: 10%;
   margin-right: 10%;
@@ -286,7 +288,3 @@ h3 {
   display: block;
 }
 
-.col-3{
-  max-width: 100%;
-  flex:50%;
-}
