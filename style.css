@@ -180,7 +180,9 @@ h1 {
   font-family: "Spartan", sans-serif;
   text-align: center;
 }
-
+h4{
+  text-align: center;
+}
 .img-pro {
   height: auto;
   max-height: 400px;
@@ -191,6 +193,8 @@ h1 {
   max-width: auto;
   max-height: auto;
   width:auto;
+  border-radius: 25px;
+
   padding:10px;
 }
 .grid-x {
@@ -207,6 +211,9 @@ p {
   font: "Source Sans Pro", "Helvetica Neue", Sans-serif;
   font-size: 25px;
   margin-bottom: 0em;
+  margin:20px;
+  letter-spacing: 2px;
+
 }
 h3 {
   text-align: center;
@@ -276,4 +283,8 @@ h3 {
 
 .grid-x{
   margin-bottom: 5%;
+}
+.img-container{
+  text-align: center;
+  display: block;
 }
