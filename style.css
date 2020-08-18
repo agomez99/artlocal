@@ -47,12 +47,13 @@ li{
 }
 .listings {
   border-radius: 20px;
-  width: 100%;
   font-size: 20px;
   background: #8c73bb;
-  margin-left: 15%;
-  padding-left: 10%;
+  margin-left: 5%;
+  margin-right: 5%;
   padding: 10px;
+  color: white;
+  font-family: "Spartan", sans-serif;
 }
 .pad2 {
   border: 1px solid rgb(14, 14, 14);
@@ -176,7 +177,7 @@ a {
   background-color: rgba(0, 0, 0, 0.4);
 }
 h1 {
-  font-size: 70px;
+  font-size: 3rem;
   font-family: "Spartan", sans-serif;
   text-align: center;
 }
@@ -210,8 +211,6 @@ h4{
 p {
   font: "Source Sans Pro", "Helvetica Neue", Sans-serif;
   font-size: 25px;
-  margin-bottom: 0em;
-  margin:20px;
   letter-spacing: 2px;
 
 }
@@ -287,4 +286,9 @@ h3 {
 .img-container{
   text-align: center;
   display: block;
+}
+
+.col-3{
+  max-width: 100%;
+  flex:50%;
 }
