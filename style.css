@@ -152,20 +152,17 @@ a {
 .card-divider {
   background-color: #8c73bb;
 }
-.container-banner {
-  height: auto;
-  border-radius: 25px;
-  opacity: 2;
-  overflow: hidden;
-  position: relative;
+
+
+#title{
   text-align: center;
+  margin-top: 5%;
   color: rgb(0, 0, 0);
   margin-left: 10%;
   margin-right: 10%;
-  margin-top: 5%;
-  height: 80%;
-  z-index: -1;
+  font-size: 4vw;
 }
+
 .centered {
   position: absolute;
   padding: 0%;
