@@ -11,6 +11,7 @@ body {
 .container-banner{
   display: block;
   text-align: center;
+  min-width:auto;
 }
 .name {
   color: white;
@@ -52,8 +53,8 @@ li{
   border-radius: 20px;
   font-size: 20px;
   background: #8c73bb;
-  margin-left: 5%;
-  margin-right: 5%;
+  margin-left: 10%;
+  margin-right:0%;
   margin-bottom:5%;
   padding: 10px;
   color: white;
@@ -64,7 +65,7 @@ li{
   height: 500px;
   right: 5%;
   width: 100%;
-  left: 8%;
+  left: 3%;
 }
 
 .pad2 {
@@ -99,7 +100,11 @@ li{
   background-image: url(marker.png);
   background-color: rgba(0, 0, 0, 0);
 }
-
+.map-ctn{
+  display: block;
+  margin-left: auto;
+  margin-right: auto
+}
 
 
 a {
