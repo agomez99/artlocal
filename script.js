@@ -27,16 +27,18 @@ if (!('remove' in Element.prototype)) {
         "geometry": {
           "type": "Point",
           "coordinates": [
-            -98.4953,
-            29.4092
+            -98.497456,
+            29.429442
           ]
         },
         "properties": {
-          "heading":"Blue Star",
-          "name":"none",
+          "heading":"DE TODOS CAMINOS SOMOS TODOS UNO",
+          "name":"ADRIANA M. GARCIA",
           "phoneFormatted": "(210) 354-3775",
           "phone": "2103543775",
-          "address": "1414 S Alamo St",
+          "address": "Between Santa Rosa Avenue and Martin Street",
+          "image":"./images/image13.jpg",
+          "info": "https://www.americansforthearts.org/by-program/networks-and-councils/public-art-network/public-art-year-in-review-database/de-todos-caminos-somos-todos-uno",
           "city": "San Antonio",
           "country": "United States",
           "crossStreet": "at S Alamo",
