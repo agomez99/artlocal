@@ -173,7 +173,8 @@ if (!('remove' in Element.prototype)) {
         },
         "properties": {
           "heading":'Pioneers of the Sky',
-          "name":"Andy and Yvette Benavides of Smart And Joe De La Cruz, Chris Montoya, and Jose Cosme",
+          "name": 
+            "Collaboration",
           "image":"./images/image7.jpg",
           "info": "",
           "phoneFormatted": "(301) 654-7336",
