@@ -32,7 +32,7 @@ if (!('remove' in Element.prototype)) {
           ]
         },
         "properties": {
-          "heading":"DE TODOS CAMINOS SOMOS TODOS UNO",
+          "heading":"De Todos Caminos Somos Todos Uno",
           "name":"ADRIANA M. GARCIA",
           "phoneFormatted": "(210) 354-3775",
           "phone": "2103543775",
@@ -338,6 +338,7 @@ if (!('remove' in Element.prototype)) {
      * - The markers onto the map
     */
     buildLocationList(stores);
+    buildGrid(stores);
     addMarkers();
   });
 
@@ -386,9 +387,54 @@ if (!('remove' in Element.prototype)) {
     });
   }
 
-  /**
-   * Add a listing for each store to the sidebar.
-  **/
+//grid listing -todo
+  function buildGrid(data) {
+    data.features.forEach(function(store, i){
+      /**
+       * Create a shortcut for `store.properties`,
+       * which will be used several times below.
+      **/
+      var prop = store.properties;
+
+      /* Add a new listing section to the sidebar. */
+      var listings = document.getElementById('grid');
+      var listing = listings.appendChild(document.createElement('div'));
+      /* Assign a unique `id` to the listing. */
+      listing.id = "listing-" + prop.id;
+      /* Assign the `item` class to each listing for styling. */
+      listing.className = 'item';
+
+
+
+      /* Add the link to the individual listing created above. */
+      var link = listing.appendChild(document.createElement('a'));
+      link.href = '#';
+      link.className = 'title';
+      link.id = "link-" + prop.id;
+      link.innerHTML = prop.address;
+      /*adds images*/
+      var image = listing.appendChild(document.createElement('img'))
+      image.src = prop.image;
+      image.className="images"
+
+      link.addEventListener('click', function(e){
+        for (var i=0; i < data.features.length; i++) {
+          if (this.id === "link-" + data.features[i].properties.id) {
+            var clickedListing = data.features[i];
+            flyToStore(clickedListing);
+            createPopUp(clickedListing);
+          }
+        }
+        var activeItem = document.getElementsByClassName('active');
+        if (activeItem[0]) {
+          activeItem[0].classList.remove('active');
+        }
+        this.parentNode.classList.add('active');
+      });
+    });
+  }
+
+
   function buildLocationList(data) {
     data.features.forEach(function(store, i){
       /**
@@ -426,11 +472,6 @@ if (!('remove' in Element.prototype)) {
       var artist = listing.appendChild(document.createElement('div'))
       artist.innerHTML  = prop.name;
       artist.className = 'artist' ;
-      /* Add details to the individual listing. */
-    //   var details = listing.appendChild(document.createElement('div'));
-
-    //   details.innerHTML = prop.city;
-
       /**
        * Listen to the element and when it is clicked, do four things:
        * 1. Update the `currentFeature` to the store associated with the clicked link

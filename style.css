@@ -17,7 +17,11 @@ body {
   color: white;
   padding-right: 10px;
 }
-
+.grid{
+  text-align: center;
+  display: block;
+  height:100px;
+}
 .artist {
   color: rgb(0, 0, 0);
 }
@@ -169,7 +173,10 @@ a {
   margin-right: 10%;
   font-size: 4vw;
 }
-
+.images{
+  height:100px;
+  display: block;
+}
 .centered {
   position: absolute;
   padding: 0%;
