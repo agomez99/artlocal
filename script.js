@@ -406,16 +406,16 @@ if (!('remove' in Element.prototype)) {
 
 
 
-      /* Add the link to the individual listing created above. */
-      var link = listing.appendChild(document.createElement('a'));
-      link.href = '#';
-      link.className = 'img-title';
-      link.id = "link-" + prop.id;
-      link.innerHTML = prop.address;
-      /*adds images*/
-      var image = listing.appendChild(document.createElement('img'))
-      image.src = prop.image;
-      image.className="images"
+      // /* Add the link to the individual listing created above. */
+      // var link = listing.appendChild(document.createElement('a'));
+      // link.href = '#';
+      // link.className = 'img-title';
+      // link.id = "link-" + prop.id;
+      // link.innerHTML = prop.address;
+      // /*adds images*/
+      // var image = listing.appendChild(document.createElement('img'))
+      // image.src = prop.image;
+      // image.className="images"
 
       link.addEventListener('click', function(e){
         for (var i=0; i < data.features.length; i++) {
@@ -472,6 +472,12 @@ if (!('remove' in Element.prototype)) {
       var artist = listing.appendChild(document.createElement('div'))
       artist.innerHTML  = prop.name;
       artist.className = 'artist' ;
+
+
+
+      var image = listing.appendChild(document.createElement('img'))
+      image.src = prop.image;
+      image.className="images"
       /**
        * Listen to the element and when it is clicked, do four things:
        * 1. Update the `currentFeature` to the store associated with the clicked link
