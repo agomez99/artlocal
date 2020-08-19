@@ -409,7 +409,7 @@ if (!('remove' in Element.prototype)) {
       /* Add the link to the individual listing created above. */
       var link = listing.appendChild(document.createElement('a'));
       link.href = '#';
-      link.className = 'title';
+      link.className = 'img-title';
       link.id = "link-" + prop.id;
       link.innerHTML = prop.address;
       /*adds images*/

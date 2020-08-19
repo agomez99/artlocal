@@ -173,9 +173,22 @@ a {
   margin-right: 10%;
   font-size: 4vw;
 }
+
+.img-title{
+  font-size: 2rem;
+  text-align: center;
+  margin-left:20%;
+}
 .images{
-  height:100px;
-  display: block;
+  height:300px;
+  margin-left: auto;
+  margin-right: auto;
+  display:block;
+  padding:10px;
+  min-width:auto;
+  min-height:200px;
+  background-color: ivory;
+
 }
 .centered {
   position: absolute;
@@ -256,6 +269,7 @@ h3 {
 .about-p {
   margin-left: 5%;
   margin-right: 5%;
+  margin-bottom: 10%;
   padding: 10px;
   color: white;
   font-family: "Spartan", sans-serif;
