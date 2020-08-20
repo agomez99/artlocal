@@ -16,6 +16,7 @@ body {
 .name {
   color: white;
   padding-right: 10px;
+  margin-top:20px;
 }
 .grid{
   text-align: center;
@@ -24,10 +25,12 @@ body {
 }
 .artist {
   color: rgb(0, 0, 0);
+
 }
 
 .address {
   color: white;
+
 }
 
 /* The page is split between map and sidebar - the sidebar gets 1/3, map
@@ -58,6 +61,7 @@ li{
   font-size: 20px;
   background: #8c73bb;
   margin-left: 10%;
+
   margin-right:0%;
   margin-bottom:5%;
   padding: 10px;
@@ -121,6 +125,8 @@ a {
 }
 .name {
   font-size: 25px;
+  padding-bottom: 10px;
+
 }
 .card{
   border-radius: 20px;
@@ -185,11 +191,11 @@ a {
   height:120px;
   margin-left: auto;
   margin-right: auto;
-  padding:10px;
+  padding:5px;
   min-width:auto;
   min-height:50px;
   vertical-align:middle;
-
+background-color: rgb(255, 255, 255);
   float:right;
 }
 .centered {
@@ -239,6 +245,10 @@ p {
   font: "Source Sans Pro", "Helvetica Neue", Sans-serif;
   font-size: 25px;
   letter-spacing: 2px;
+
+}
+h2{
+  margin-bottom:100px;
 
 }
 h3 {
