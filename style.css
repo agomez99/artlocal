@@ -192,10 +192,11 @@ a {
   margin-left: auto;
   margin-right: auto;
   padding:5px;
+  margin-bottom: 5px;
   min-width:auto;
   min-height:50px;
   vertical-align:middle;
-background-color: rgb(255, 255, 255);
+  background-color: rgb(255, 255, 255);
   float:right;
 }
 .centered {

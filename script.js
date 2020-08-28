@@ -407,6 +407,11 @@ if (!('remove' in Element.prototype)) {
 
 
 
+      var image = listing.appendChild(document.createElement('img'))
+      image.src = prop.image;
+      image.className="images"
+
+      
       /* Add the link to the individual listing created above. */
       var link = listing.appendChild(document.createElement('a'));
       link.href = '#';
@@ -429,9 +434,6 @@ if (!('remove' in Element.prototype)) {
 
 
 
-      var image = listing.appendChild(document.createElement('img'))
-      image.src = prop.image;
-      image.className="images"
       /**
        * Listen to the element and when it is clicked, do four things:
        * 1. Update the `currentFeature` to the store associated with the clicked link
