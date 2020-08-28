@@ -399,6 +399,8 @@ if (!('remove' in Element.prototype)) {
 
       /* Add a new listing section to the sidebar. */
       var listings = document.getElementById('listings');
+      listings.appendChild(document.createElement('hr'));
+
       var listing = listings.appendChild(document.createElement('div'));
       /* Assign a unique `id` to the listing. */
       listing.id = "listing-" + prop.id;
@@ -418,7 +420,6 @@ if (!('remove' in Element.prototype)) {
       link.className = 'title';
       link.id = "link-" + prop.id;
       link.innerHTML = prop.address;
-
 
 
 

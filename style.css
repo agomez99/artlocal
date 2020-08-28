@@ -115,13 +115,15 @@ li{
   margin-right: auto
 }
 
-
+hr{
+  color:white;
+}
 a {
   color: white;
 }
 
 .item {
-  margin-bottom: 80px;
+  margin-bottom: 50px;
 }
 .name {
   font-size: 25px;
@@ -249,7 +251,7 @@ p {
 
 }
 h2{
-  margin-bottom:100px;
+  margin-bottom:50px;
 
 }
 h3 {
