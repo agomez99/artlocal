@@ -413,13 +413,6 @@ if (!('remove' in Element.prototype)) {
       image.src = prop.image;
       image.className="images"
 
-      
-      /* Add the link to the individual listing created above. */
-      var link = listing.appendChild(document.createElement('a'));
-      link.href = '#';
-      link.className = 'title';
-      link.id = "link-" + prop.id;
-      link.innerHTML = prop.address;
 
 
 

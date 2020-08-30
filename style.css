@@ -126,9 +126,11 @@ a {
   margin-bottom: 50px;
 }
 .name {
-  font-size: 25px;
+  font-size: 2rem;
+  padding:5px;
   padding-bottom: 10px;
-
+  letter-spacing: 2px;
+  display:inline-block
 }
 .card{
   border-radius: 20px;
