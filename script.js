@@ -6,7 +6,7 @@ if (!('remove' in Element.prototype)) {
     };
   }
   //var token = process.env.APIMAPBOXTOKEN
-  mapboxgl.accessToken = 'pk.eyJ1IjoiYWdvbWV6ZGV2IiwiYSI6ImNrY3Jhbnd4cjFjN2IycWxiZmI3M3BjbGYifQ.Fl2pUWgsw96zmmkFMmPvXg';
+  mapboxgl.accessToken = 'pk.eyJ1IjoiYWdvbWV6ZGV2IiwiYSI6ImNrY3JiNjlreTFkM2QyeXM1NG4xODA2anYifQ.t9njpH24eFVIczJo7N3RVQ';
 
 
 
@@ -413,6 +413,12 @@ if (!('remove' in Element.prototype)) {
       image.src = prop.image;
       image.className="images"
 
+     /* Add the link to the individual listing created above. */
+     var link = listing.appendChild(document.createElement('a'));
+     link.href = '#';
+     link.className = 'title';
+     link.id = "link-" + prop.id;
+     link.innerHTML = prop.address;
 
 
 
