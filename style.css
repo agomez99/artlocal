@@ -41,9 +41,37 @@ body {
   padding-top: 25px;
   padding-bottom: 30px;
 }
+.footer {
+  background: #8c73bb;
+  padding:20px;
+  font-size: 25px;
+  padding-top: 25px;
+  padding-bottom: 30px;
+  list-style: none;
+  display:flex;
+  text-align:center;
+  justify-content: center;
+  position:static;
+  width:100%;
+}
+.footer :hover {
+  color: rgb(108, 14, 170);
+  text-decoration: overline;
+  font-family: "Spartan", sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+}
+.li-foot{
+  padding-left:200px;
+
+}
 li{
   font-family: "Spartan", sans-serif;
-
+}
+ul{
+  margin-left: 0;
+  margin-right:0;
+  margin-bottom:0;
 }
 .menu :hover {
   color: rgb(108, 14, 170);
@@ -184,7 +212,13 @@ a {
   margin-right: 10%;
   font-size: 4vw;
 }
-
+a :hover {
+  color: rgb(108, 14, 170);
+  text-decoration: overline;
+  font-family: "Spartan", sans-serif;
+  font-size: 30px;
+  font-weight: bold;
+}
 .img-title{
   font-size: 2rem;
   text-align: center;
