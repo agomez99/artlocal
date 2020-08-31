@@ -212,11 +212,10 @@ a {
   margin-right: 10%;
   font-size: 4vw;
 }
-a :hover {
+a:hover {
   color: rgb(108, 14, 170);
-  text-decoration: overline;
   font-family: "Spartan", sans-serif;
-  font-size: 30px;
+  font-size: 25px;
   font-weight: bold;
 }
 .img-title{
