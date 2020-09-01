@@ -32,7 +32,12 @@ body {
   color: white;
 
 }
-
+a{
+  color: rgb(108, 14, 170);
+  font-family: "Spartan", sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+}
 /* The page is split between map and sidebar - the sidebar gets 1/3, map
   gets 2/3 of the page. You can adjust this to your personal liking. */
 .menu {
@@ -384,7 +389,12 @@ h3 {
   width: 100% !important;
   height: auto !important;
 }
+ul{
 
+}
+.more-li{
+  list-style: none;
+}
 @media (max-width: 1200px) {
   #photos {
   -moz-column-count:    4;
