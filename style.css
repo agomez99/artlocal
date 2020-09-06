@@ -159,7 +159,7 @@ a {
   margin-bottom: 50px;
 }
 .name {
-  font-size: 2rem;
+  font-size: 3vh;
   padding:5px;
   padding-bottom: 10px;
   letter-spacing: 2px;
@@ -215,7 +215,7 @@ a {
   color: rgb(0, 0, 0);
   margin-left: 10%;
   margin-right: 10%;
-  font-size: 4vw;
+  font-size: 2vh;
 }
 a:hover {
   color: rgb(108, 14, 170);

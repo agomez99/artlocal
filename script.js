@@ -153,7 +153,7 @@ if (!('remove' in Element.prototype)) {
           ]
         },
         "properties": {
-          "heading":"River Walk Mosaic Murals",
+          "heading":"Mosaic Murals on The River Walk",
           "name":"Oscar Alvarado ",
           "image":"./images/image6.jpg",
           "info": "https://www.getcreativesanantonio.com/Public-Art/Public-Artworks-Map/Public-Artworks-List/Public-Artwork/Article/164/River-Walk-Mosaic-Murals",
@@ -412,12 +412,14 @@ if (!('remove' in Element.prototype)) {
       image.className="images"
 
      /* Add the link to the individual listing created above. */
-     var link = listing.appendChild(document.createElement('a'));
+     var link = listing.appendChild(document.createElement('a' ));
      link.href = '#';
      link.className = 'title';
      link.id = "link-" + prop.id;
      link.innerHTML = prop.address;
 
+
+      listing.appendChild(document.createElement('br' ));
 
 
       var name = listing.appendChild(document.createElement('div'))
