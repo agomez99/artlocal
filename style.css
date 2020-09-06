@@ -17,11 +17,7 @@ body {
   text-align: center;
   min-width:auto;
 }
-.name {
-  color: white;
-  padding-right: 10px;
-  margin-top:20px;
-}
+
 .grid{
   text-align: center;
   display: block;
@@ -30,8 +26,6 @@ body {
 .artist {
   color: rgb(0, 0, 0);
   margin-left:10px;
-
-
 }
 
 .address {
@@ -39,7 +33,6 @@ body {
 
 }
 a{
-  color: rgb(108, 14, 170);
   font-family: "Spartan", sans-serif;
   font-size: 20px;
   font-weight: bold;
@@ -94,7 +87,6 @@ ul{
   font-size: 20px;
   background: #8c73bb;
   margin-left: 10%;
-
   margin-right:0%;
   margin-bottom:5%;
   padding: 10px;
@@ -168,8 +160,10 @@ a {
   padding-bottom: 10px;
   letter-spacing: 2px;
   display:inline-block;
-
+  color: white;
+  margin-top:20px;
 }
+
 .card{
   border-radius: 20px;
 
