@@ -387,8 +387,6 @@ if (!('remove' in Element.prototype)) {
   }
 
 
-
-
   function buildLocationList(data) {
     data.features.forEach(function(store, i){
       /**
