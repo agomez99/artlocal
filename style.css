@@ -48,7 +48,7 @@ a{
   background: #8c73bb;
   font-size: 25px;
   padding-top: 25px;
-  padding-bottom: 30px;
+  padding-bottom:50px;
 }
 .footer {
   background: #8c73bb;
@@ -82,12 +82,11 @@ ul{
   margin-right:0;
   margin-bottom:0;
 }
-.menu :hover {
-  color: rgb(108, 14, 170);
-  text-decoration: overline;
-  font-family: "Spartan", sans-serif;
-  font-size: 30px;
-  font-weight: bold;
+.menuitem :hover {
+  /* color: rgb(108, 14, 170); */
+  /* text-decoration: overline; */
+  /* font-family: "Spartan", sans-serif; */
+  transform: scale(1.0);
 }
 .sidebar {
   width: 100%;
@@ -222,10 +221,13 @@ a {
   font-size: 2vh;
 }
 a:hover {
-  color: rgb(108, 14, 170);
+  color: white;
   font-family: "Spartan", sans-serif;
-  font-size: 25px;
   font-weight: bold;
+  background-color: #b99eeb;
+
+  transform: scale(1.1);
+
 }
 .img-title{
   font-size: 2rem;
@@ -394,9 +396,7 @@ h3 {
   width: 100% !important;
   height: auto !important;
 }
-ul{
 
-}
 .more-li{
   list-style: none;
 }
