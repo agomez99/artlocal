@@ -29,6 +29,8 @@ body {
 }
 .artist {
   color: rgb(0, 0, 0);
+  margin-left:10px;
+
 
 }
 
@@ -100,6 +102,10 @@ ul{
   display: inline-block;
   font-family: "Spartan", sans-serif;
 }
+
+.title{
+  margin-left:10px;
+}
 .pad2 {
   border: 1px solid rgb(14, 14, 14);
   height: 500px;
@@ -161,7 +167,8 @@ a {
   padding:5px;
   padding-bottom: 10px;
   letter-spacing: 2px;
-  display:inline-block
+  display:inline-block;
+
 }
 .card{
   border-radius: 20px;
@@ -211,7 +218,6 @@ a {
 #title{
   text-align: center;
   color: rgb(0, 0, 0);
-  margin-left: 10%;
   margin-right: 10%;
   font-size: 8vh;
 }
@@ -304,7 +310,6 @@ h3 {
   color: white;
   text-shadow: 2px 2px #a200ff;
   border-radius: 25px;
-  padding: 5px;
   background-color: black;
   font: "Source Sans Pro", "Helvetica Neue", Sans-serif;
   display: inline;
