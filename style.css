@@ -374,6 +374,7 @@ h3 {
 .img-container{
   text-align: center;
   display: block;
+  margin-bottom:25px;
 }
 
 #photos {
