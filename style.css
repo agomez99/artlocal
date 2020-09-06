@@ -3,6 +3,10 @@ body {
   font: 400 15px/22px "Source Sans Pro", "Helvetica Neue", Sans-serif;
   -webkit-font-smoothing: antialiased;
 }
+.row {
+  margin-left:0;
+  margin-right:0;
+}
 #btn {
   border-radius: 2px;
   color: white;
