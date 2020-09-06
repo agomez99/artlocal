@@ -97,6 +97,7 @@ ul{
 
 .title{
   margin-left:10px;
+
 }
 .pad2 {
   border: 1px solid rgb(14, 14, 14);
@@ -212,7 +213,6 @@ a {
 #title{
   text-align: center;
   color: rgb(0, 0, 0);
-  margin-right: 10%;
   font-size: 8vh;
 }
 a:hover {
