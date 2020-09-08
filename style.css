@@ -426,5 +426,5 @@ h3 {
 
 .imgleft :hover{
   transform: scale(1.5);
-
+  border: 2px solid #a200ff;
 }
