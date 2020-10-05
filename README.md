@@ -1,4 +1,4 @@
 # artlocal
-Website made in Vailla JavaScript that finds local public art using coordinates and MapboxAPI
+Designed with Vailla JavaScript, website that finds local public art using coordinates with MapboxAPI
 <br>
 https://sapublicart.netlify.app/
