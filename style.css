@@ -287,7 +287,7 @@ h4{
 
 p {
   font: "Source Sans Pro", "Helvetica Neue", Sans-serif;
-  font-size: 25px;
+  font-size: 1vhw;
   letter-spacing: 2px;
 
 }
@@ -300,12 +300,12 @@ h3 {
 }
 
 .artname {
-  font-size: 2vw;
+  font-size: 7vw;
   color: white;
   text-shadow: 2px 2px #a200ff;
-  border-radius: 25px;
   background-color: black;
   font: "Source Sans Pro", "Helvetica Neue", Sans-serif;
+  padding:8px;
   display: inline;
 }
 
@@ -428,3 +428,9 @@ h3 {
   transform: scale(1.5);
   border: 2px solid #a200ff;
 }
+
+@media (max-width: 40em) {
+  .imageview {
+  display: none;
+  }
+  }
