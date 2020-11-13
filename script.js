@@ -1,3 +1,7 @@
+
+
+
+
 if (!('remove' in Element.prototype)) {
     Element.prototype.remove = function() {
       if (this.parentNode) {
@@ -7,6 +11,9 @@ if (!('remove' in Element.prototype)) {
   }
   //var token = process.env.APIMAPBOXTOKEN
   mapboxgl.accessToken = 'pk.eyJ1IjoiYWdvbWV6ZGV2IiwiYSI6ImNrY3JiNjlreTFkM2QyeXM1NG4xODA2anYifQ.t9njpH24eFVIczJo7N3RVQ';
+
+  
+  //mapboxgl.accessToken = process.env.APIMAPBOXTOKEN;
 
 
 
@@ -35,7 +42,6 @@ if (!('remove' in Element.prototype)) {
           "heading":"De Todos Caminos Somos Todos Uno",
           "name":"ADRIANA M. GARCIA",
           "phoneFormatted": "(210) 354-3775",
-          "phone": "2103543775",
           "address": "Between Santa Rosa Avenue and Martin Street",
           "image":"./images/image13.jpg",
           "info": "https://www.americansforthearts.org/by-program/networks-and-councils/public-art-network/public-art-year-in-review-database/de-todos-caminos-somos-todos-uno",
@@ -60,8 +66,6 @@ if (!('remove' in Element.prototype)) {
          "name":"Jesse Trevino",
          "image":"./images/image2.jpg",
          "info": "https://www.getcreativesanantonio.com/Public-Art/Public-Artworks-Map/Public-Artworks-List/Public-Artwork/Article/287/La-Veladora-of-Our-Lady-of-Guadalupe",
-          "phoneFormatted": "(202) 507-8357",
-          "phone": "2025078357",
           "address": "1315 Guadalupe St",
           "city": "San Antonio",
           "country": "United States",
@@ -86,7 +90,6 @@ if (!('remove' in Element.prototype)) {
           "image":"./images/image3.jpg",
           "info" : "https://www.getcreativesanantonio.com/Public-Art/Public-Artworks-Map/Public-Artworks-List/Public-Artwork/Article/742/Dream-Song-Tower",
           "phoneFormatted": "(202) 387-9338",
-          "phone": "2023879338",
           "address": "Interstate 35 Access Rd & S Zarzamora St",
           "city": "San Antonio",
           "country": "United States",
@@ -109,8 +112,6 @@ if (!('remove' in Element.prototype)) {
          "info" : "https://www.getcreativesanantonio.com/Public-Art/Public-Artworks-Map/Public-Artworks-List/Public-Artwork/Article/165/Torch-of-Friendship-Antorcha-de-Amistad",
          "name":"Sebastián",
          "image":"./images/image4.jpg",
-          "phoneFormatted": "(202) 337-9338",
-          "phone": "2023379338",
           "address": "333 Losoya Street",
           "city": "San Antonio",
           "country": "United States",
@@ -133,8 +134,6 @@ if (!('remove' in Element.prototype)) {
             "name":" Angel Rodríguez–Díaz",
             "image":"./images/image5.jpg",
             "info": "https://www.getcreativesanantonio.com/Public-Art/Public-Artworks-Map/Public-Artworks-List/Public-Artwork/Article/380/Crossroads-of-Enlightenment",
-            "phoneFormatted": "(202) 547-9338",
-          "phone": "2025479338",
           "address": "4400 Blanco Road ",
           "city": "San Antonio",
           "country": "United States",
@@ -179,8 +178,6 @@ if (!('remove' in Element.prototype)) {
             "Collaboration",
           "image":"./images/image7.jpg",
           "info": "https://www.getcreativesanantonio.com/Public-Art/Public-Artworks-Map/Public-Artworks-List/Public-Artwork/Article/779/Pioneers-of-the-Sky-The-Stinson-School-of-Flying",
-          "phoneFormatted": "(301) 654-7336",
-          "phone": "3016547336",
           "address": "8410 Mission Road",
           "cc": "US",
           "city": "San Antonio",
@@ -203,8 +200,6 @@ if (!('remove' in Element.prototype)) {
           "name":"Daniel Eime",
           "image":"./images/image8.jpg",
           "info": "https://www.getcreativesanantonio.com/Public-Art/Public-Artworks-Map/Public-Artworks-List/Public-Artwork/Article/762/Powder",
-          "phoneFormatted": "(571) 203-0082",
-          "phone": "5712030082",
           "address": "502 Burnet St",
           "city": "San Antonio",
           "country": "United States",
@@ -227,8 +222,6 @@ if (!('remove' in Element.prototype)) {
             "name":"Michael Lance",
             "image":"./images/image9.jpg",
             "info": "https://www.getcreativesanantonio.com/Public-Art/Public-Artworks-Map/Public-Artworks-List/Public-Artwork/Article/284/Red-Bird",
-          "phoneFormatted": "(703) 522-2016",
-          "phone": "7035222016",
           "address": "204 Augusta",
           "city": "San Antonio",
           "country": "United States",
@@ -251,8 +244,6 @@ if (!('remove' in Element.prototype)) {
          "name":"Ethel Wilson Harris ",
          "image":"./images/image10.jpg",
          "info": "https://www.getcreativesanantonio.com/Public-Art/Public-Artworks-Map/Public-Artworks-List/Public-Artwork/Article/160/Maverick-Tile-Mural",
-          "phoneFormatted": "(610) 642-9400",
-          "phone": "6106429400",
           "address": "Riverwalk- North of Lexington St. Bridge",
           "city": "Ardmore",
           "country": "United States",
@@ -274,8 +265,6 @@ if (!('remove' in Element.prototype)) {
         "name":"Alex Deleon",
         "image":"./images/image11.jpg",
         "info": "https://www.getcreativesanantonio.com/Public-Art/Public-Artworks-Map/Public-Artworks-List/Public-Artwork/Article/130/Some-Things-Ive-Experienced-in-South-Texas",
-          "phoneFormatted": "(215) 386-1365",
-          "phone": "2153861365",
           "address": "600 Hemisfair Park",
           "city": "San Antonio",
           "country": "United States",
@@ -297,8 +286,6 @@ if (!('remove' in Element.prototype)) {
         "name":"Joey Fauerso",
         "image":"./images/image12.jpg",
         "info": "https://www.getcreativesanantonio.com/Public-Art/Public-Artworks-Map/Public-Artworks-List/Public-Artwork/Article/721/Canopy",
-          "phoneFormatted": "(202) 331-3355",
-          "phone": "2023313355",
           "address": "729 Fulton Ave",
           "city": "San Antonio",
           "country": "United States",
