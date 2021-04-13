@@ -34,29 +34,6 @@ if (!('remove' in Element.prototype)) {
         "geometry": {
           "type": "Point",
           "coordinates": [
-            -98.497456,
-            29.429442
-          ]
-        },
-        "properties": {
-          "heading":"De Todos Caminos Somos Todos Uno",
-          "name":"ADRIANA M. GARCIA",
-          "phoneFormatted": "(210) 354-3775",
-          "address": "Between Santa Rosa Avenue and Martin Street",
-          "image":"./images/image13.jpg",
-          "info": "https://www.americansforthearts.org/by-program/networks-and-councils/public-art-network/public-art-year-in-review-database/de-todos-caminos-somos-todos-uno",
-          "city": "San Antonio",
-          "country": "United States",
-          "crossStreet": "at S Alamo",
-          "postalCode": "78210",
-          "state": "Texas"
-        }
-      },
-      {
-        "type": "Feature",
-        "geometry": {
-          "type": "Point",
-          "coordinates": [
             -98.51508,
             29.418455
           ]
@@ -292,6 +269,29 @@ if (!('remove' in Element.prototype)) {
           "crossStreet": "at 19th St",
           "postalCode": "78212",
           "state": "TX"
+        }
+      },
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -98.497456,
+            29.429442
+          ]
+        },
+        "properties": {
+          "heading":"De Todos Caminos Somos Todos Uno",
+          "name":"ADRIANA M. GARCIA",
+          "phoneFormatted": "(210) 354-3775",
+          "address": "Between Santa Rosa Avenue and Martin Street",
+          "image":"./images/image13.jpg",
+          "info": "https://www.americansforthearts.org/by-program/networks-and-councils/public-art-network/public-art-year-in-review-database/de-todos-caminos-somos-todos-uno",
+          "city": "San Antonio",
+          "country": "United States",
+          "crossStreet": "at S Alamo",
+          "postalCode": "78210",
+          "state": "Texas"
         }
       }
     ]
