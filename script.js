@@ -345,7 +345,7 @@ if (!('remove' in Element.prototype)) {
        * Create a marker using the div element
        * defined above and add it to the map.
       **/
-      new mapboxgl.Marker(el, { offset: [0, -10] })
+      new mapboxgl.Marker(el, { offset: [0, -20] })
         .setLngLat(marker.geometry.coordinates)
         //.setOffset(offset)
         .addTo(map);
@@ -443,6 +443,8 @@ if (!('remove' in Element.prototype)) {
         this.parentNode.classList.add('active');
       });
     });
+
+
   }
 
   /**

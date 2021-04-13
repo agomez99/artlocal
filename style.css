@@ -134,10 +134,10 @@ ul{
 .marker {
   border: none;
   cursor: pointer;
-  height: 56px;
-  width: 56px;
+  height: 85px;
+  width: 55px;
   background: no-repeat;
-  background-image: url(marker.png);
+  background-image: url(images/pin.svg);
   background-color: rgba(0, 0, 0, 0);
 }
 .map-ctn{
