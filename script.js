@@ -328,7 +328,7 @@ if (!('remove' in Element.prototype)) {
        * Create a marker using the div element
        * defined above and add it to the map.
       **/
-      new mapboxgl.Marker(el, { offset: [0, -20] })
+      new mapboxgl.Marker(el, { offset: [0, 0] })
         .setLngLat(marker.geometry.coordinates)
         //.setOffset(offset)
         .addTo(map);
@@ -453,8 +453,7 @@ if (!('remove' in Element.prototype)) {
 
     var popup = new mapboxgl.Popup({ 
       closeOnClick: true,
-
-      offset: [100, -200],
+      offset: [200, -200],
     })
       .setLngLat(currentFeature.geometry.coordinates)
       .setHTML('<img  class="map-img" src=' + currentFeature.properties.image + '></img>' + 
@@ -468,4 +467,7 @@ if (!('remove' in Element.prototype)) {
       .addTo(map);
   }
 
-  map.addControl(new mapboxgl.NavigationControl());
+  map.addControl(new mapboxgl.NavigationControl({
+    // Hide rotation control.
+    showCompass: false
+}), 'top-right');

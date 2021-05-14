@@ -16,8 +16,9 @@ a.btn{
   display: block;
   margin-left: 10%;
   margin-right:10%;
-  color:purple;
+  color:rgb(108, 14, 170);
   border-color: rgb(108, 14, 170);
+  background-color: rgb(255, 255, 255);
 }
 .container-banner{
   display: block;
@@ -352,7 +353,7 @@ h3 {
   font-size: 3rem;
   color:rgb(0, 0, 0);
 }
-.mapboxgl-ctrl-compass { display: none; }
+.mapboxgl-ctrl-compass { display:inside; }
 
 
 .map-img {
@@ -370,7 +371,7 @@ h3 {
   margin-top: -10%;
 }
 p.artist-header{
-  font-size: 20px;
+  font-size: 10px;
   text-align: center;
 }
 .map-address {
