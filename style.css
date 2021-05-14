@@ -187,9 +187,9 @@ a {
 }
 
 .swiper-slide {
-  text-align: center;
+  text-align: left;
   font-size: 18px;
-  background: rgb(8, 8, 8);
+  background: rgb(255, 255, 255);
   border-radius: 25px;
 
   /* Center slide text vertically */
@@ -315,13 +315,14 @@ h3 {
 }
 
 .artname {
-  font-size:2.2vw;
-  color: white;
-  text-shadow: 2px 2px #a200ff;
-  background-color: black;
+  font-size:1rem;
+  color: rgb(2, 2, 2);
+  background-color: rgb(255, 254, 254);
   font: "Source Sans Pro", "Helvetica Neue", Sans-serif;
   padding:8px;
-  display: inline;
+  display: block;
+  font-family: "Spartan", sans-serif;
+
 }
 
 .about-hdr {
@@ -457,7 +458,7 @@ p.artist-header{
   .swiper-slide {
     
     width:100%;
-    height:300px;
+    height:200px;
   }
   .swiper-container{
     height:fit-content;
@@ -471,6 +472,16 @@ p.artist-header{
   background-image: url(images/pin2.svg);
   background-color: rgba(0, 0, 0, 0);
 }
+.artname {
+  color: rgb(0, 0, 0);
+  background-color: rgb(255, 255, 255);
+  font: "Source Sans Pro", "Helvetica Neue", Sans-serif;
+  margin-left: 20%;
+  clear: both;
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  font-size: 0.8rem;
 
 }
 
