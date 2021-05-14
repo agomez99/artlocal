@@ -280,6 +280,9 @@ if (!('remove' in Element.prototype)) {
     ]
   };
 
+
+ 
+
   /**
    * Assign a unique id to each store. You'll use this `id`
    * later to associate each point on the map with a listing
@@ -301,13 +304,13 @@ if (!('remove' in Element.prototype)) {
       "type": "geojson",
       "data": stores
     });
-
     /**
      * Add all the things to the page:
      * - The location listings on the side of the page
      * - The markers onto the map
     */
     buildLocationList(stores);
+
     addMarkers();
   });
 
