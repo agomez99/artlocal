@@ -44,11 +44,7 @@ if (!('remove' in Element.prototype)) {
          "image":"./images/image2.jpg",
          "info": "https://www.getcreativesanantonio.com/Public-Art/Public-Artworks-Map/Public-Artworks-List/Public-Artwork/Article/287/La-Veladora-of-Our-Lady-of-Guadalupe",
           "address": "1315 Guadalupe St",
-          "city": "San Antonio",
-          "country": "United States",
-          "crossStreet": "at 22nd St NW",
           "postalCode": "20037",
-          "state": "D.C."
         }
       },
       {
@@ -66,13 +62,8 @@ if (!('remove' in Element.prototype)) {
           "name":"Ortiz Cruz",
           "image":"./images/image3.jpg",
           "info" : "https://www.getcreativesanantonio.com/Public-Art/Public-Artworks-Map/Public-Artworks-List/Public-Artwork/Article/742/Dream-Song-Tower",
-          "phoneFormatted": "(202) 387-9338",
           "address": "Interstate 35 Access Rd & S Zarzamora St",
-          "city": "San Antonio",
-          "country": "United States",
-          "crossStreet": "IH 35 South and Zarzamora",
-          "postalCode": "78224",
-          "state": "Texas"
+          "state": "Texas",
         }
       },
       {
@@ -91,10 +82,7 @@ if (!('remove' in Element.prototype)) {
          "image":"./images/image4.jpg",
           "address": "333 Losoya Street",
           "city": "San Antonio",
-          "country": "United States",
-          "crossStreet": "at 34th St NW",
           "postalCode": "20007",
-          "state": "D.C."
         }
       },
       {
@@ -113,8 +101,6 @@ if (!('remove' in Element.prototype)) {
             "info": "https://www.getcreativesanantonio.com/Public-Art/Public-Artworks-Map/Public-Artworks-List/Public-Artwork/Article/380/Crossroads-of-Enlightenment",
           "address": "4400 Blanco Road ",
           "city": "San Antonio",
-          "country": "United States",
-          "crossStreet": "Intersection of Blanco and Basse",
           "postalCode": "78212",
           "state": "TX"
         }
@@ -135,7 +121,6 @@ if (!('remove' in Element.prototype)) {
           "info": "https://www.getcreativesanantonio.com/Public-Art/Public-Artworks-Map/Public-Artworks-List/Public-Artwork/Article/164/River-Walk-Mosaic-Murals",
           "address": "849 E Commerce",
           "city": "San Antonio",
-          "country": "United States",
           "postalCode": "278205",
           "state": "Texas"
         }
@@ -158,7 +143,6 @@ if (!('remove' in Element.prototype)) {
           "address": "8410 Mission Road",
           "cc": "US",
           "city": "San Antonio",
-          "country": "United States",
           "postalCode": "20814",
           "state": "TX"
         }
@@ -179,8 +163,6 @@ if (!('remove' in Element.prototype)) {
           "info": "https://www.getcreativesanantonio.com/Public-Art/Public-Artworks-Map/Public-Artworks-List/Public-Artwork/Article/762/Powder",
           "address": "502 Burnet St",
           "city": "San Antonio",
-          "country": "United States",
-          "crossStreet": "btw Explorer & Library",
           "postalCode": "78214",
           "state": "Texas"
         }
@@ -201,8 +183,6 @@ if (!('remove' in Element.prototype)) {
             "info": "https://www.getcreativesanantonio.com/Public-Art/Public-Artworks-Map/Public-Artworks-List/Public-Artwork/Article/284/Red-Bird",
           "address": "204 Augusta",
           "city": "San Antonio",
-          "country": "United States",
-          "crossStreet": "at N Randolph St.",
           "postalCode": "78205",
           "state": "TX"
         }
@@ -222,10 +202,10 @@ if (!('remove' in Element.prototype)) {
          "image":"./images/image10.jpg",
          "info": "https://www.getcreativesanantonio.com/Public-Art/Public-Artworks-Map/Public-Artworks-List/Public-Artwork/Article/160/Maverick-Tile-Mural",
           "address": "Riverwalk- North of Lexington St. Bridge",
-          "city": "Ardmore",
+          "city": "San Antonio",
           "country": "United States",
           "postalCode": "78201",
-          "state": "PA"
+          "state": "TX"
         }
       },
       {
@@ -244,7 +224,6 @@ if (!('remove' in Element.prototype)) {
         "info": "https://www.getcreativesanantonio.com/Public-Art/Public-Artworks-Map/Public-Artworks-List/Public-Artwork/Article/130/Some-Things-Ive-Experienced-in-South-Texas",
           "address": "600 Hemisfair Park",
           "city": "San Antonio",
-          "country": "United States",
           "postalCode": "78205",
           "state": "TX"
         }
@@ -265,7 +244,6 @@ if (!('remove' in Element.prototype)) {
         "info": "https://www.getcreativesanantonio.com/Public-Art/Public-Artworks-Map/Public-Artworks-List/Public-Artwork/Article/721/Canopy",
           "address": "729 Fulton Ave",
           "city": "San Antonio",
-          "country": "United States",
           "crossStreet": "at 19th St",
           "postalCode": "78212",
           "state": "TX"
@@ -288,8 +266,6 @@ if (!('remove' in Element.prototype)) {
           "image":"./images/image13.jpg",
           "info": "https://www.americansforthearts.org/by-program/networks-and-councils/public-art-network/public-art-year-in-review-database/de-todos-caminos-somos-todos-uno",
           "city": "San Antonio",
-          "country": "United States",
-          "crossStreet": "at S Alamo",
           "postalCode": "78210",
           "state": "Texas"
         }
