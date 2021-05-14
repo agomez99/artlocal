@@ -12,6 +12,13 @@ body {
   color: white;
   background-color: rgb(241, 72, 241);
 }
+a.btn{
+  display: block;
+  margin-left: 10%;
+  margin-right:10%;
+  color:purple;
+  border-color: rgb(108, 14, 170);
+}
 .container-banner{
   display: block;
   text-align: center;
@@ -225,6 +232,9 @@ a:hover {
   transform: scale(1.1);
 
 }
+#success-btn.hover{
+  background-color: none;
+}
 .img-title{
   font-size: 2rem;
   text-align: center;
@@ -349,10 +359,16 @@ h3 {
 }
 
 .map-artist {
+  font-size: 25px;
+  font-weight: bold;
+  text-align: center;
+  color:purple;
+  margin-top: -10%;
+}
+p.artist-header{
   font-size: 20px;
   text-align: center;
 }
-
 .map-address {
   font-size: 20px;
   text-align: center;
@@ -364,6 +380,7 @@ h3 {
   text-align: center;
   margin-left: 20%;
   margin-right:20%;
+  
 }
 
 .grid-x{

@@ -475,8 +475,10 @@ if (!('remove' in Element.prototype)) {
     })
       .setLngLat(currentFeature.geometry.coordinates)
       .setHTML('<img  class="map-img" src=' + currentFeature.properties.image + '></img>' + 
-        '<p class="map-address">' + currentFeature.properties.address + '</p>' + "Artist:" + '<p class="map-artist">' +  currentFeature.properties.name + '</p>' + 
-         '<a href='+ currentFeature.properties.info +'><button type="button" id=success-btn class="success button">More Info</button>'
+        '<p class="map-address">' + currentFeature.properties.address + '</p>' + 
+        '<p class="artist-header" >ARTIST</p>'
+        + '<p class="map-artist">' +  currentFeature.properties.name + '</p>' + 
+         '<a  class="btn" href='+ currentFeature.properties.info +'>MORE INFO</a>'
 
 
       )
