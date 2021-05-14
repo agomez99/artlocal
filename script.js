@@ -1,7 +1,6 @@
 
 
 
-
 if (!('remove' in Element.prototype)) {
     Element.prototype.remove = function() {
       if (this.parentNode) {
@@ -24,6 +23,14 @@ if (!('remove' in Element.prototype)) {
     center: [-98.491142, 29.424349],
     zoom: 11,
     scrollZoom:true
+  });
+  fetch('./locations.json').then(response => {
+    return response.json();
+  }).then(data => {
+    // Work with JSON data here
+    console.log(data);
+  }).catch(err => {
+    // Do something for an error here
   });
 
   var stores = {
@@ -272,7 +279,7 @@ if (!('remove' in Element.prototype)) {
       }
     ]
   };
-  
+
   /**
    * Assign a unique id to each store. You'll use this `id`
    * later to associate each point on the map with a listing
