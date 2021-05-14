@@ -350,8 +350,14 @@ h3 {
 }
 
 .mapboxgl-popup-close-button {
-  font-size: 3rem;
+  font-size: 4rem;
   color:rgb(0, 0, 0);
+}
+.mapboxgl-popup-close-button:hover {
+  font-size: 4rem;
+  color:rgb(255, 255, 255);
+  background-color: rgb(59, 5, 80);
+  border-radius: 50%;
 }
 .mapboxgl-ctrl-compass { display:inside; }
 

@@ -455,6 +455,7 @@ if (!('remove' in Element.prototype)) {
       closeOnClick: true,
       offset: [200, -200],
     })
+
       .setLngLat(currentFeature.geometry.coordinates)
       .setHTML('<img  class="map-img" src=' + currentFeature.properties.image + '></img>' + 
         '<p class="map-address">' + currentFeature.properties.address + '</p>' + 
