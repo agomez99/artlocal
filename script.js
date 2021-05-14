@@ -404,6 +404,23 @@ if (!('remove' in Element.prototype)) {
 
 
 
+      //new pic grid
+      var listings2 = document.getElementById('listings2');
+      var listing2 = listings2.appendChild(document.createElement('div'));
+
+      var link2 = listing2.appendChild(document.createElement('a' ));
+      link2.href = '#';
+      link2.className = 'title';
+      link2.id = "link2-" + prop.id;
+
+      var image2 = listing2.appendChild(document.createElement('img'))
+      listing2.id = "listing2-" + prop.id;
+      listing2.className = 'item';
+      image2.src = prop.image;
+      image2.className="images"
+      link2.appendChild(image2);
+      listing2.appendChild(link2);
+
       /**
        * Listen to the element and when it is clicked, do four things:
        * 1. Update the `currentFeature` to the store associated with the clicked link
@@ -414,6 +431,20 @@ if (!('remove' in Element.prototype)) {
       link.addEventListener('click', function(e){
         for (var i=0; i < data.features.length; i++) {
           if (this.id === "link-" + data.features[i].properties.id) {
+            var clickedListing = data.features[i];
+            flyToStore(clickedListing);
+            createPopUp(clickedListing);
+          }
+        }
+        var activeItem = document.getElementsByClassName('active');
+        if (activeItem[0]) {
+          activeItem[0].classList.remove('active');
+        }
+        this.parentNode.classList.add('active');
+      });
+      link2.addEventListener('click', function(e){
+        for (var i=0; i < data.features.length; i++) {
+          if (this.id === "link2-" + data.features[i].properties.id) {
             var clickedListing = data.features[i];
             flyToStore(clickedListing);
             createPopUp(clickedListing);
