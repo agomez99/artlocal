@@ -456,6 +456,15 @@ p.artist-header{
   .swiper-container{
     height:fit-content;
   }
+  .marker{
+  border: none;
+  cursor: pointer;
+  height: 100px;
+  width:50px;
+  background: no-repeat;
+  background-image: url(images/pin2.svg);
+  background-color: rgba(0, 0, 0, 0);
+}
 
 }
 
