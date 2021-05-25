@@ -241,6 +241,26 @@
             "postalCode": "78210",
             "state": "Texas"
           }
+        },
+        {
+          "type": "Feature",
+          "geometry": {
+            "type": "Point",
+            "coordinates": [
+              -98.49046393438974,
+              29.429442
+            ]
+          },
+          "properties": {
+            "heading":"The Last Parade",
+            "name":"Rudy Herrera",
+            "address": "229 E Houston St",
+            "image":"./images/kressmural.jpg",
+            "info": "#",
+            "city": "San Antonio",
+            "postalCode": "78205",
+            "state": "Texas"
+          }
         }
       ]
 }
