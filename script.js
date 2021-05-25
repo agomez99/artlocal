@@ -249,10 +249,9 @@ if (!('remove' in Element.prototype)) {
   }
 
   map.addControl(
-
-    new mapboxgl.NavigationControl({
-    // Hide rotation control.
-    showCompass: false
+    new MapboxGeocoder({
+      accessToken: mapboxgl.accessToken,
+      mapboxgl: mapboxgl
 }), 'top-right');
 
   }).catch(err => {
