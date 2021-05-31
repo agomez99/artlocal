@@ -124,18 +124,18 @@ if (!('remove' in Element.prototype)) {
   stores.features.forEach(function(store, i){
     store.properties.id = i;
   });
-  var xFile;
+//   var xFile;
 
-var requestX = $.getJSON("sublocations.json", function(json){
-    xFile = json;
-});
+// var requestX = $.getJSON("sublocations.json", function(json){
+//     xFile = json;
+// });
 
 
-$.when(requestX).then(function(){
-   // do something;
-   // this function only gets called when both requestX & requestY complete.
-   console.log(xFile)
-});
+// $.when(requestX).then(function(){
+//    // do something;
+//    // this function only gets called when both requestX & requestY complete.
+//    console.log(xFile)
+// });
 
 
   fetch('./locations.json').then(response => {
