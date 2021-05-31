@@ -415,7 +415,7 @@ stores.features.forEach(function (marker) {
       listings3.id = "listing3-" + prop.id;
       listings3.className = 'item';
       image3.src = prop.image;
-      image3.className="images"
+      image3.className="images2"
       link3.appendChild(image3);
       listings3.appendChild(link3);
 
