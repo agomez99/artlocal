@@ -152,6 +152,16 @@ ul{
   background-image: url(images/pin.svg);
   background-color: rgba(0, 0, 0, 0);
 }
+
+.marker2 {
+  border: none;
+  cursor: pointer;
+  height: 30px;
+  width: 30px;
+  background: no-repeat;
+  background-image: url(images/star.png);
+  background-color: rgba(0, 0, 0, 0);
+}
 .map-ctn{
   display: block;
   margin-left: auto;
@@ -427,10 +437,28 @@ p.artist-header{
   column-gap:           0px;  
 }
 
+#nlocations{
+  /* Prevent vertical gaps */
+  padding:5px;
+  line-height: 0;
+  -webkit-column-count:10;
+  -webkit-column-gap:  20px;
+  -moz-column-count:    0;
+  -moz-column-gap:      0px;
+  column-count:         5;
+  column-gap:           5px;  
+}
+
+
 #photos img {
   /* Just in case there are inline attributes */
   width: 100% !important;
   height: auto !important;
+}
+#nlocations img {
+  /* Just in case there are inline attributes */
+  width: 200px  !important;
+  height: 100px !important;
 }
 
 .more-li{

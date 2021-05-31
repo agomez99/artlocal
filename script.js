@@ -21,6 +21,123 @@ if (!('remove' in Element.prototype)) {
     zoom: 11,
     scrollZoom:true
   });
+
+
+  var stores = {
+    "type": "FeatureCollection",
+    "features": [
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+           -98.48612044232871,
+           29.426359577566828
+
+
+          ]
+        },
+        "properties": {
+          'iconSize': [30, 30],
+          "heading":"The Alamo ",
+          "name":"The Alamo",
+          "image":"./images/alamo.jpg",
+          "info": "https://www.thealamo.org/",
+          "address": "1471 P St NW",
+          "city": "Washington DC",
+          "country": "United States",
+          "crossStreet": "at 15th St NW",
+          "postalCode": "20005",
+          "state": "D.C."
+        }
+      },
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -98.482147,
+            29.437281          ]
+        },
+        "properties": {
+          'iconSize': [60, 60],
+            "heading":"Art Museum ",
+            "name":"San Antonio Museum of Art",
+            "image":"./images/SAMA.jpg",
+            "info" : "https://www.samuseum.org/",
+            "address": " 200 W Jones Ave",
+            "state": "Texas",
+          "city": "San Antonio",
+          "country": "United States",
+          "crossStreet": "at 22nd St NW",
+          "postalCode": "78215",
+          "state": "TX."
+        }
+      },
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -98.45709579999983,
+            29.486352521862464       ]
+        },
+        "properties": {
+          'iconSize': [60, 60],
+          "heading":"Art Museum ",
+          "name":"McNay Art Muesum",
+          "image":"./images/mcknay.jpg",
+          "info":"https://www.mcnayart.org/",
+          "address": " 6000 N New Braunfels Ave",
+          "city": "San Antonio",
+          "country": "United States",
+          "crossStreet": "at Dupont Circle",
+          "postalCode": "78209",
+          "state": "Texas"
+        }
+      },
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -98.49516626931181 ,
+            29.409368146898036         ]
+        },
+        "properties": {
+
+        'iconSize': [60, 60],
+        "heading":"Art Museum ",
+        "name":"Blue Star Contemporary",
+        "image":"./images/bluestar.jpg",
+        "info":"https://bluestarcontemporary.org/",
+        "address": " 116 Blue Star,",
+        "city": "San Antonio",
+        "country": "United States",
+        "crossStreet": "at Dupont Circle",
+        "postalCode": "78204",
+        "state": "Texas"
+        }
+      }
+    ]
+  };
+  stores.features.forEach(function(store, i){
+    store.properties.id = i;
+  });
+  var xFile;
+
+var requestX = $.getJSON("sublocations.json", function(json){
+    xFile = json;
+});
+
+
+$.when(requestX).then(function(){
+   // do something;
+   // this function only gets called when both requestX & requestY complete.
+   console.log(xFile)
+});
+
+
   fetch('./locations.json').then(response => {
     return response.json();
   }).then(data => {
@@ -38,6 +155,8 @@ if (!('remove' in Element.prototype)) {
     store.properties.id = i;
   });
 
+
+  
   /**
    * Wait until the map loads to make changes to the map.
   */
@@ -60,6 +179,31 @@ if (!('remove' in Element.prototype)) {
     addMarkers();
   });
 
+
+
+  map.on('load', function (e) {
+    /* Add the data to your map as a layer */
+    
+    map.addLayer({
+      "id": "locations",
+      "type": "circle",
+      "paint": {
+        "circle-radius": 10,
+        "circle-color": "purple",
+        "circle-opacity": 1,
+        "circle-stroke-width": 0,
+    },
+      /* Add a GeoJSON source containing place coordinates and information. */
+      "source": {
+        "type": "geojson",
+        "data": stores
+      }
+
+    });
+    buildLocationList2(stores);
+    addMarkers();
+
+  });
   /**
    * Add a marker to the map for every store listing.
   **/
@@ -103,6 +247,46 @@ if (!('remove' in Element.prototype)) {
         listing.classList.add('active');
       });
     });
+
+
+
+stores.features.forEach(function (marker) {
+      // Create a DOM element for each marker.
+      var el = document.createElement('div');
+      el.className = 'marker2';
+      el.id = "marker-" + marker.properties.id;
+      /* Assign the `marker` class to each marker for styling. */
+      el.className = 'marker2';
+       
+      // Add markers to the map.
+      new mapboxgl.Marker(el, { offset: [0, 0] })
+      .setLngLat(marker.geometry.coordinates)
+      .addTo(map);
+
+      /**
+       * Listen to the element and when it is clicked, do three things:
+       * 1. Fly to the point
+       * 2. Close all other popups and display popup for clicked store
+       * 3. Highlight listing in sidebar (and remove highlight for all other listings)
+      **/
+       el.addEventListener('click', function(e){
+        /* Fly to the point */
+        flyToStore(marker);
+        /* Close all other popups and display popup for clicked store */
+        createPopUp(marker);
+        /* Highlight listing in sidebar */
+        var activeItem = document.getElementsByClassName('active');
+        e.stopPropagation();
+        if (activeItem[0]) {
+          activeItem[0].classList.remove('active');
+        }
+        var listing = document.getElementById('listing-' + marker.properties.id);
+        listing.classList.add('active');
+      });
+
+      });
+
+
   }
 
 
@@ -170,6 +354,7 @@ if (!('remove' in Element.prototype)) {
       link2.appendChild(image2);
       listing2.appendChild(link2);
 
+
       /**
        * Listen to the element and when it is clicked, do four things:
        * 1. Update the `currentFeature` to the store associated with the clicked link
@@ -209,7 +394,57 @@ if (!('remove' in Element.prototype)) {
 
 
   }
+  function buildLocationList2(data) {
+    data.features.forEach(function(store, i){
+      /**
+       * Create a shortcut for `store.properties`,
+       * which will be used several times below.
+      **/
+      var prop = store.properties;
 
+      /* Add a new listing section to the sidebar. */
+      var listings3 = document.getElementById('listings3');
+      var listings3 = listings3.appendChild(document.createElement('div'));
+
+      var link3 = listings3.appendChild(document.createElement('a' ));
+      link3.href = '#';
+      link3.className = 'title';
+      link3.id = "link3-" + prop.id;
+
+      var image3 = listings3.appendChild(document.createElement('img'))
+      listings3.id = "listing3-" + prop.id;
+      listings3.className = 'item';
+      image3.src = prop.image;
+      image3.className="images"
+      link3.appendChild(image3);
+      listings3.appendChild(link3);
+
+
+      /**
+       * Listen to the element and when it is clicked, do four things:
+       * 1. Update the `currentFeature` to the store associated with the clicked link
+       * 2. Fly to the point
+       * 3. Close all other popups and display popup for clicked store
+       * 4. Highlight listing in sidebar (and remove highlight for all other listings)
+      **/
+      link3.addEventListener('click', function(e){
+        for (var i=0; i < data.features.length; i++) {
+          if (this.id === "link3-" + data.features[i].properties.id) {
+            var clickedListing = data.features[i];
+            flyToStore(clickedListing);
+            createPopUp(clickedListing);
+          }
+        }
+        var activeItem = document.getElementsByClassName('active');
+        if (activeItem[0]) {
+          activeItem[0].classList.remove('active');
+        }
+        this.parentNode.classList.add('active');
+      });
+    });
+
+
+  }
   /**
    * Use Mapbox GL JS's `flyTo` to move the camera smoothly
    * a given center point.
