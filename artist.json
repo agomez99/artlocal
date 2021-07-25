@@ -42,5 +42,26 @@
         "profileimage": "./images/image2.jpg",
         "bio": "" ,
         "link" :"details.html#artist6"
+},
+{
+        "name": "Rudy Herrera",
+        "featureimage": "./images/artist/rudyH.jpg",
+        "profileimage": "./images/image2.jpg",
+        "bio": "" ,
+        "link" :"#"
+},
+{
+        "name": "Adriana M. Garcia",
+        "featureimage": "./images/artist/adriana.jpg",
+        "profileimage": "./images/image2.jpg",
+        "bio": "" ,
+        "link" :"#"
+},
+{
+        "name": "Enrique Sebastian Carbajal",
+        "featureimage": "./images/artist/sebastian.jpg",
+        "profileimage": "./images/image2.jpg",
+        "bio": "" ,
+        "link" :"#"
 }
 ]
