@@ -488,12 +488,31 @@ p.artist-header{
 
 
   /*-------------Index CSS----------*/
-
+  .gridindex {
+    text-align:left;
+    margin-top: 20px;
+    padding-bottom: 20px;
+    margin-left: 5%;
+    background-color: #bba5e4;
+    margin-right: 2%;
+    padding: 5px;
+    border-radius: 20px;
+    margin-bottom: 2%;
+    height: 100vh;
+  }
+  
   #myData{
    padding-bottom:20px;
-   justify-content:end;
-  }
+   padding-left:20px;
+   -webkit-columns: 50px 4;
+   -moz-columns: 50px 4;
+   columns: 50px 3;
+   -webkit-column-gap: 0;
+   -moz-column-gap: 0;
+   column-gap: 0;
+   height: 100%;
 
+}
   .indexPic{
     width:100px;
     height:100px;
@@ -505,7 +524,6 @@ p.artist-header{
     padding-bottom:25px;
     font-size:30px;
     color:white;
-    display:block;
   }
 
 
