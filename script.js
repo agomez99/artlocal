@@ -1,6 +1,5 @@
 
 
-
 if (!('remove' in Element.prototype)) {
     Element.prototype.remove = function() {
       if (this.parentNode) {
@@ -175,7 +174,6 @@ if (!('remove' in Element.prototype)) {
      * - The markers onto the map
     */
     buildLocationList(pins);
-
     addMarkers();
   });
 
@@ -312,7 +310,7 @@ stores.features.forEach(function (marker) {
 
       var image = listing.appendChild(document.createElement('img'))
       image.src = prop.image;
-      image.className="images"
+      image.className="images1"
 
      /* Add the link to the individual listing created above. */
      var link = listing.appendChild(document.createElement('a' ));
@@ -413,7 +411,7 @@ stores.features.forEach(function (marker) {
 
       var image3 = listings3.appendChild(document.createElement('img'))
       listings3.id = "listing3-" + prop.id;
-      listings3.className = 'item';
+      listings3.className = 'item2';
       image3.src = prop.image;
       image3.className="images2"
       link3.appendChild(image3);

@@ -54,6 +54,18 @@ a{
   padding-bottom:20px;
   padding-left: 50px;
 }
+/* Highlight text in  */
+ul.menu a
+{
+    color: #fff6f6
+}
+
+ul.menu a:hover
+{
+    transform: scale(1.2);
+} 
+
+
 .footer {
   background: #8c73bb;
   padding:20px;
@@ -112,6 +124,20 @@ ul{
   margin-left:10px;
 
 }
+
+
+.hidden {
+  display:none;
+  }
+  .visible {
+  display:block;
+  position:absolute;
+  top:0;left:0;
+  }
+
+
+
+
 .pad2 {
   border: 1px solid rgb(14, 14, 14);
   height: 500px;
@@ -181,7 +207,7 @@ a {
 
 }
 .name {
-  font-size: 3vh;
+  font-size: 2vh;
   padding:5px;
   padding-bottom: 10px;
   letter-spacing: 2px;
@@ -241,7 +267,7 @@ a {
   color: rgb(0, 0, 0);
   font-size: 8vh;
 }
-a:hover {
+/* a:hover {
   color: white;
   font-family: "Spartan", sans-serif;
   font-weight: bold;
@@ -249,7 +275,7 @@ a:hover {
 
   transform: scale(1.1);
 
-}
+} */
 #success-btn.hover{
   background-color: none;
 }
@@ -257,6 +283,19 @@ a:hover {
   font-size: 2rem;
   text-align: center;
   margin-left:20%;
+  float:left;
+}
+.images1{
+  height:120px;
+  border-radius: 5px;
+  margin-left: auto;
+  margin-right: auto;
+  padding:2px;
+  margin-bottom: 5px;
+  min-width:auto;
+  min-height:50px;
+  vertical-align:middle;
+  background-color: rgb(255, 255, 255);
   float:left;
 }
 .images{
@@ -272,6 +311,7 @@ a:hover {
   background-color: rgb(255, 255, 255);
   float:left;
 }
+
 .images:hover{
   border-color: rgb(34, 34, 33);
   border-width: 2;
@@ -445,6 +485,33 @@ p.artist-header{
   margin-bottom:25px;
 }
 
+
+
+  /*-------------Index CSS----------*/
+
+  #myData{
+   padding-bottom:20px;
+   justify-content:end;
+  }
+
+  .indexPic{
+    width:100px;
+    height:100px;
+    border-radius:15px;
+    margin-right:20px;
+  }
+
+  .indexName{
+    padding-bottom:25px;
+    font-size:30px;
+    color:white;
+    display:block;
+  }
+
+
+
+/*--------------------------------------*/
+
 #photos {
   /* Prevent vertical gaps */
   padding:5px;
@@ -555,3 +622,4 @@ p.artist-header{
   display: none;
   }
   }
+

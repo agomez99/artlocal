@@ -1,0 +1,46 @@
+[
+    {
+        "name": "Jesse Trevino",
+        "featureimage": "./images/trevino.jpg",
+        "profileimage": "./images/image2.jpg",
+        "bio": "",
+        "link" :"details.html#artist1"
+
+    },
+    {
+            "name": "Los Otros",
+            "featureimage": "./images/LO.jpg",
+            "profileimage": "./images/image2.jpg",
+            "bio": "",
+            "link" :"details.html#artist2"
+
+  },
+  {
+          "name": "Oscar Alvarado",
+          "featureimage": "./images/oscar.jpg",
+          "profileimage": "./images/image2.jpg",
+          "bio": "" ,
+          "link" :"details.html#artist3"
+},
+{
+        "name": "Joey Fauerso",
+        "featureimage": "https://d3zr9vspdnjxi.cloudfront.net/artistInfo/joeyfaue/textPages/169.jpg",
+        "profileimage": "./images/image2.jpg",
+        "bio": "" ,
+        "link" :"details.html#artist4"
+},
+{
+        "name": "Ethel Wilson Harris",
+        "featureimage": "https://chapelonthedunes.org/wp-content/uploads/2019/01/Ethel-Wilson-San-Antonio-Evening-News-1919-p.3-Colors-on-Clay-277x400.jpg",
+        "profileimage": "./images/image2.jpg",
+        "bio": "" ,
+        "link" :"details.html#artist5"
+},
+{
+        "name": "Alex De Leon",
+        "featureimage": "./images/alex.jpg",
+        "profileimage": "./images/image2.jpg",
+        "bio": "" ,
+        "link" :"details.html#artist6"
+}
+]
