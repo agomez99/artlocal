@@ -115,10 +115,7 @@ ul{
   display: inline-block;
   font-family: "Spartan", sans-serif;
 }
-#listings2{
-  margin-top: 10%;
 
-}
 
 .title{
   margin-left:10px;
@@ -303,8 +300,9 @@ a {
   border-radius: 5px;
   margin-left: auto;
   margin-right: auto;
-  padding:2px;
+  padding:1px;
   margin-bottom: 5px;
+  margin-top: 35px;
   min-width:auto;
   min-height:50px;
   vertical-align:middle;
@@ -423,7 +421,7 @@ h3 {
 .about-p {
   margin-left: 5%;
   margin-right: 5%;
-  margin-bottom: 10%;
+  margin-bottom: 2%;
   padding: 10px;
   color: white;
   font-family: "Spartan", sans-serif;
@@ -486,7 +484,6 @@ p.artist-header{
 }
 
 
-
   /*-------------Index CSS----------*/
   .gridindex {
     text-align:left;
@@ -511,6 +508,7 @@ p.artist-header{
    -moz-column-gap: 0;
    column-gap: 0;
    height: 100%;
+   display:block;
 
 }
   .indexPic{
@@ -532,13 +530,14 @@ p.artist-header{
 
 #photos {
   /* Prevent vertical gaps */
-  padding:5px;
+  padding:10px;
+  padding-top: 5px;
   line-height: 0;
   -webkit-column-count: 4;
   -webkit-column-gap:   0px;
   -moz-column-count:    5;
   -moz-column-gap:      0px;
-  column-count:         5;
+  column-count:         4;
   column-gap:           0px;  
 }
 

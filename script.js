@@ -319,20 +319,21 @@ stores.features.forEach(function (marker) {
      link.id = "link-" + prop.id;
      link.innerHTML = prop.address;
 
-
       listing.appendChild(document.createElement('br' ));
 
 
       var name = listing.appendChild(document.createElement('div'))
       name.innerHTML  = prop.heading;
       name.className = 'name' ;
+      link.appendChild(image);
+      link.appendChild(name);
 
 
 
       var artist = listing.appendChild(document.createElement('div'))
       artist.innerHTML  = prop.name;
       artist.className = 'artist' ;
-
+      link.appendChild(artist);
 
 
       //new pic grid

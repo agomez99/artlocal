@@ -22,13 +22,18 @@ for (var i = 0; i < data.length; i++) {
     var img  = document.createElement("img");
     img.src =  data[i].featureimage;
     img.className="indexPic"
-    mainContainer.appendChild(img);
+    mainContainer.appendChild(img );
 
 
     var link = document.createElement("a");
     link.href = data[i].link ;
     link.innerHTML =  data[i].name ;
+
     mainContainer.appendChild(link);
+
+
+
+
 
 }
 }
