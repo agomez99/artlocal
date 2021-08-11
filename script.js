@@ -22,7 +22,7 @@ if (!('remove' in Element.prototype)) {
   });
 
 
-  var stores = {
+  var poplocations = {
     "type": "FeatureCollection",
     "features": [
       {
@@ -120,7 +120,7 @@ if (!('remove' in Element.prototype)) {
       }
     ]
   };
-  stores.features.forEach(function(store, i){
+  poplocations.features.forEach(function(store, i){
     store.properties.id = i;
   });
 //   var xFile;
@@ -141,21 +141,18 @@ if (!('remove' in Element.prototype)) {
     return response.json();
   }).then(data => {
     // Work with JSON data here
-    var pins =  data;
-    console.log(pins);
-
+    var artlocations =  data;
+    console.log(artlocations);
 
   /**
    * Assign a unique id to each store. You'll use this `id`
    * later to associate each point on the map with a listing
    * in the sidebar.
   */
-   pins.features.forEach(function(store, i){
+   artlocations.features.forEach(function(store, i){
     store.properties.id = i;
   });
 
-
-  
   /**
    * Wait until the map loads to make changes to the map.
   */
@@ -166,21 +163,10 @@ if (!('remove' in Element.prototype)) {
     */
     map.addSource("places", {
       "type": "geojson",
-      "data": pins
+      "data": artlocations
     });
-    /**
-     * Add all the things to the page:
-     * - The location listings on the side of the page
-     * - The markers onto the map
-    */
-    buildLocationList(pins);
-    addMarkers();
-  });
 
-
-
-  map.on('load', function (e) {
-    /* Add the data to your map as a layer */
+    /* Circle marker layer */
     
     map.addLayer({
       "id": "locations",
@@ -194,11 +180,12 @@ if (!('remove' in Element.prototype)) {
       /* Add a GeoJSON source containing place coordinates and information. */
       "source": {
         "type": "geojson",
-        "data": stores
+        "data": poplocations
       }
 
     });
-    buildLocationList2(stores);
+    buildLocationList(artlocations);
+    buildLocationList2(poplocations);
     addMarkers();
 
   });
@@ -207,7 +194,7 @@ if (!('remove' in Element.prototype)) {
   **/
   function addMarkers() {
     /* For each feature in the GeoJSON object above: */
-    pins.features.forEach(function(marker) {
+    artlocations.features.forEach(function(marker) {
       /* Create a div element for the marker. */
       var el = document.createElement('div');
       /* Assign a unique `id` to the marker. */
@@ -248,7 +235,7 @@ if (!('remove' in Element.prototype)) {
 
 
 
-stores.features.forEach(function (marker) {
+    poplocations.features.forEach(function (marker) {
       // Create a DOM element for each marker.
       var el = document.createElement('div');
       el.className = 'marker2';
