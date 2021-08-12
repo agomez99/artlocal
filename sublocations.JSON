@@ -1,63 +1,26 @@
 {
     "type": "FeatureCollection",
-    "features": [
-      {
-        "type": "Feature",
-        "geometry": {
-          "type": "Point",
-          "coordinates": [
-            -98.4861,
-            29.4260
-          ]
-        },
-        "properties": {
-         "heading":"La Veladora of Our Lady of Guadalupe ",
-         "name":"Pin1",
-         "image":"./images/image2.jpg",
-         "info": "https://www.getcreativesanantonio.com/Public-Art/Public-Artworks-Map/Public-Artworks-List/Public-Artwork/Article/287/La-Veladora-of-Our-Lady-of-Guadalupe",
-          "address": "1315 Guadalupe St",
-          "postalCode": "20037"
+      "features": [
+        {
+          "type": "Feature",
+          "geometry": {
+            "type": " Point",
+            "coordinates": [-98.48612044232871, 29.426359577566828],
+          },
+          "properties": {
+            "iconSize": [30, 30],
+            "heading": "The Alamo ",
+            "name": "The Alamo",
+            "image": "./images/alamo.jpg",
+            "info": "https://www.thealamo.org/",
+            "address": "1471 P St NW",
+            "city": "Washington DC",
+            "country": "United States",
+            "crossStreet": "at 15th St NW",
+            "postalCode": "20005",
+            "state": "D.C."
+          }
         }
-      },
-      {
-        "type": "Feature",
-        "geometry": {
-          "type": "Point",
-          "coordinates": [
-            -98.534132,
-            29.349889
-
-          ]
-        },
-        "properties": {
-          "heading":"Dream Song Tower ",
-          "name":"Pin2",
-          "image":"./images/image3.jpg",
-          "info" : "https://www.getcreativesanantonio.com/Public-Art/Public-Artworks-Map/Public-Artworks-List/Public-Artwork/Article/742/Dream-Song-Tower",
-          "address": "Interstate 35 Access Rd & S Zarzamora St",
-          "state": "Texas"
-        }
-      },
-      {
-        "type": "Feature",
-        "geometry": {
-          "type": "Point",
-          "coordinates": [
-            -98.487473,
-            29.423029
-          ]
-        },
-        "properties": {
-         "heading":"The Torch of Friendship",
-         "info" : "https://www.getcreativesanantonio.com/Public-Art/Public-Artworks-Map/Public-Artworks-List/Public-Artwork/Article/165/Torch-of-Friendship-Antorcha-de-Amistad",
-         "name":"pin3",
-         "image":"./images/image4.jpg",
-          "address": "333 Losoya Street",
-          "city": "San Antonio",
-          "postalCode": "20007"
-        }
-      
-      }
-    ]
-}
-      
+        ]
+        
+    }

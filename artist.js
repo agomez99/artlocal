@@ -29,11 +29,8 @@ for (var i = 0; i < data.length; i++) {
     link.href = data[i].link ;
     link.innerHTML =  data[i].name ;
 
+
     mainContainer.appendChild(link);
-
-
-
-
 
 }
 }
