@@ -259,10 +259,6 @@ fetch("./locations.json")
 
     function buildLocationList(data) {
       data.features.forEach(function (store, i) {
-        /**
-         * Create a shortcut for `store.properties`,
-         * which will be used several times below.
-         **/
         var prop = store.properties;
 
         /* Add a new listing section to the sidebar. */
@@ -315,14 +311,6 @@ fetch("./locations.json")
         image2.className = "images";
         link2.appendChild(image2);
         listing2.appendChild(link2);
-
-        /**
-         * Listen to the element and when it is clicked, do four things:
-         * 1. Update the `currentFeature` to the store associated with the clicked link
-         * 2. Fly to the point
-         * 3. Close all other popups and display popup for clicked store
-         * 4. Highlight listing in sidebar (and remove highlight for all other listings)
-         **/
         link.addEventListener("click", function (e) {
           for (var i = 0; i < data.features.length; i++) {
             if (this.id === "link-" + data.features[i].properties.id) {
@@ -353,12 +341,9 @@ fetch("./locations.json")
         });
       });
     }
+    //Notable locations being added to the map
     function buildLocationList2(data) {
       data.features.forEach(function (store, i) {
-        /**
-         * Create a shortcut for `store.properties`,
-         * which will be used several times below.
-         **/
         var prop = store.properties;
 
         /* Add a new listing section to the sidebar. */
@@ -378,13 +363,6 @@ fetch("./locations.json")
         link3.appendChild(image3);
         listings3.appendChild(link3);
 
-        /**
-         * Listen to the element and when it is clicked, do four things:
-         * 1. Update the `currentFeature` to the store associated with the clicked link
-         * 2. Fly to the point
-         * 3. Close all other popups and display popup for clicked store
-         * 4. Highlight listing in sidebar (and remove highlight for all other listings)
-         **/
         link3.addEventListener("click", function (e) {
           for (var i = 0; i < data.features.length; i++) {
             if (this.id === "link3-" + data.features[i].properties.id) {
@@ -432,6 +410,8 @@ fetch("./locations.json")
             '<p class="map-address">' +
             currentFeature.properties.address +
             "</p>" +
+
+            '<p class="map-artist">' +currentFeature.properties.heading +
             '<p class="artist-header" >ARTIST</p>' +
             '<p class="map-artist">' +
             currentFeature.properties.name +

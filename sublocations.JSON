@@ -1,26 +1,31 @@
 {
-    "type": "FeatureCollection",
-      "features": [
-        {
-          "type": "Feature",
-          "geometry": {
-            "type": " Point",
-            "coordinates": [-98.48612044232871, 29.426359577566828],
-          },
-          "properties": {
-            "iconSize": [30, 30],
-            "heading": "The Alamo ",
-            "name": "The Alamo",
-            "image": "./images/alamo.jpg",
-            "info": "https://www.thealamo.org/",
-            "address": "1471 P St NW",
-            "city": "Washington DC",
-            "country": "United States",
-            "crossStreet": "at 15th St NW",
-            "postalCode": "20005",
-            "state": "D.C."
-          }
-        }
-        ]
-        
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": " Point",
+        "coordinates": [
+          -98.48612044232871,
+          29.426359577566828
+        ],
+      },
+      "properties": {
+        "iconSize": [
+          30,
+          30
+        ],
+        "heading": "The Alamo ",
+        "name": "The Alamo",
+        "image": "./images/alamo.jpg",
+        "info": "https://www.thealamo.org/",
+        "address": "1471 P St NW",
+        "city": "Washington DC",
+        "country": "United States",
+        "crossStreet": "at 15th St NW",
+        "postalCode": "20005",
+        "state": "D.C."
+      }
     }
+  ]
+}
