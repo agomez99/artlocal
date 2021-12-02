@@ -345,7 +345,7 @@ fetch("./locations.json")
     function buildLocationList2(data) {
       data.features.forEach(function (store, i) {
         var prop = store.properties;
-
+        console.log(prop);
         /* Add a new listing section to the sidebar. */
         var listings3 = document.getElementById("listings3");
         var listings3 = listings3.appendChild(document.createElement("div"));
@@ -355,13 +355,26 @@ fetch("./locations.json")
         link3.className = "title";
         link3.id = "link3-" + prop.id;
 
+        
+        var feattext = listings3.appendChild(document.createElement("p"));
+        listings3.appendChild(feattext);
+        feattext.className = "feattext";
+        feattext.innerHTML = prop.name;
+        console.log(feattext);
+
+
         var image3 = listings3.appendChild(document.createElement("img"));
         listings3.id = "listing3-" + prop.id;
         listings3.className = "item2";
         image3.src = prop.image;
         image3.className = "images2";
+
+
         link3.appendChild(image3);
         listings3.appendChild(link3);
+
+
+      
 
         link3.addEventListener("click", function (e) {
           for (var i = 0; i < data.features.length; i++) {

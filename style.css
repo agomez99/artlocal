@@ -326,14 +326,12 @@ a {
   margin-right: auto;
   margin-bottom: 5px;
   min-width:auto;
-  background-color: rgb(255, 255, 255);
 }
 .images2:hover{
   border-color: rgb(34, 34, 33);
   border-width:5;
-  background-color: rgb(238, 85, 212);
   transform: scale(1.2, 1.2);
-
+  background-color:rgb(0, 0, 0);
 }
 .centered {
   position: absolute;
@@ -543,6 +541,7 @@ p.artist-header{
 
 #nlocations{
   padding:5px;
+  padding-bottom: 100px;
 
 }
 
@@ -561,10 +560,24 @@ p.artist-header{
   height:90px !important;
   width:100%;
 }
+
+
 #listings3{
   display:inline-flex;
   padding-right:5px;
 
+
+}
+
+
+.feattext{
+  display:block;
+  color:white;
+  text-align: center;
+}
+
+.centered:hover {
+  transform: translate(-50%, -50%);
 }
 .more-li{
   list-style: none;
