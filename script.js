@@ -120,7 +120,6 @@ poplocations.features.forEach(function (store, i) {
 //    console.log(xFile)
 // });
 
-
 fetch("./locations.json")
   .then((response) => {
     return response.json();
@@ -160,8 +159,13 @@ fetch("./locations.json")
         paint: {
           "circle-radius": 10,
           "circle-color": "purple",
-          "circle-opacity": 1,
-          "circle-stroke-width": 0,
+          "circle-opacity": [
+            "case",
+            ["boolean", ["feature-state", "hover"], false],
+            1,
+            1.5,
+          ],
+          "circle-stroke-width": 1.5,
         },
         /* Add a GeoJSON source containing place coordinates and information. */
         source: {
@@ -169,6 +173,24 @@ fetch("./locations.json")
           data: poplocations,
         },
       });
+
+      let hoveredStateId = null;
+      map.on("mousemove", "locations", (e) => {
+        if (e.features.length > 0) {
+          if (hoveredStateId !== null) {
+            map.setFeatureState(
+              { source: 'locations', id: hoveredStateId },
+              { hover: false }
+            );
+          }
+          hoveredStateId = e.features[0].id;
+          map.setFeatureState(
+            { source: 'locations', id: hoveredStateId },
+            { hover:true }
+          );
+        }
+      });
+
       buildLocationList(artlocations);
       buildLocationList2(poplocations);
       addMarkers();
@@ -355,13 +377,11 @@ fetch("./locations.json")
         link3.className = "title";
         link3.id = "link3-" + prop.id;
 
-        
         var feattext = listings3.appendChild(document.createElement("p"));
         listings3.appendChild(feattext);
         feattext.className = "feattext";
         feattext.innerHTML = prop.name;
         console.log(feattext);
-
 
         var image3 = listings3.appendChild(document.createElement("img"));
         listings3.id = "listing3-" + prop.id;
@@ -369,12 +389,8 @@ fetch("./locations.json")
         image3.src = prop.image;
         image3.className = "images2";
 
-
         link3.appendChild(image3);
         listings3.appendChild(link3);
-
-
-      
 
         link3.addEventListener("click", function (e) {
           for (var i = 0; i < data.features.length; i++) {
@@ -413,6 +429,7 @@ fetch("./locations.json")
       var popup = new mapboxgl.Popup({
         closeOnClick: true,
         offset: [200, -200],
+        
       })
 
         .setLngLat(currentFeature.geometry.coordinates)
@@ -423,8 +440,8 @@ fetch("./locations.json")
             '<p class="map-address">' +
             currentFeature.properties.address +
             "</p>" +
-
-            '<p class="map-artist">' +currentFeature.properties.heading +
+            '<p class="map-artist">' +
+            currentFeature.properties.heading +
             '<p class="artist-header" >ARTIST</p>' +
             '<p class="map-artist">' +
             currentFeature.properties.name +

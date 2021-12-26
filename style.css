@@ -173,8 +173,9 @@ ul{
   width: 55px;
   background: no-repeat;
   background-image: url(images/pin.svg);
-  background-color: rgba(0, 0, 0, 0);
 }
+
+
 
 .marker2 {
   border: none;
@@ -182,8 +183,10 @@ ul{
   height: 30px;
   width: 30px;
   background: no-repeat;
-  background-image: url(images/star.png);
-  background-color: rgba(0, 0, 0, 0);
+}
+.marker2:hover{
+  transform: scale(1.5);
+
 }
 .map-ctn{
   display: block;
@@ -690,7 +693,7 @@ p.artist-header{
   column-count:         1;
   }
  
-
+}
 @media (max-width: 40em) {
   .imageview {
   display: none;
