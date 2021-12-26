@@ -261,6 +261,26 @@
             "postalCode": "78205",
             "state": "Texas"
           }
+        },
+        {
+          "type": "Feature",
+          "geometry": {
+            "type": "Point",
+            "coordinates": [
+              -98.39449279103972,
+              29.397867915768376
+            ]
+          },
+          "properties": {
+            "heading":"El Rey",
+            "name":"Colton Valentine",
+            "address": "4930 Rigsby Avenue",
+            "image":"./images/rey.jpg",
+            "info": "https://www.instagram.com/colton_valentine_/?hl=en",
+            "city": "San Antonio",
+            "postalCode": "78205",
+            "state": "Texas"
+          }
         }
       ]
 }
