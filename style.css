@@ -305,7 +305,6 @@ a {
   margin-right: auto;
   padding:1px;
   margin-bottom: 5px;
-  margin-top: 35px;
   min-width:auto;
   min-height:50px;
   vertical-align:middle;
@@ -530,6 +529,7 @@ p.artist-header{
 /*--------------------------------------*/
 
 #photos {
+  display: block;
   /* Prevent vertical gaps */
   padding:10px;
   padding-top: 5px;
@@ -549,16 +549,18 @@ p.artist-header{
 
 
 #photos img {
-  
-  /* Just in case there are inline attributes */
+  object-fit: cover;
+  object-position: 100% 0%;
+  width:100px;
+  /* Just in case there are inline attributes
   width: 100% !important;
-  height:100% !important;
+  height:100% !important; */
 }
 #nlocations img {
   /* Just in case there are inline attributes */
-  height:90px !important;
+  height:100% !important;
   width:100%;
-  display: block;
+  display: inline-flex;
   margin-left: auto;
   margin-right: auto;
 }
