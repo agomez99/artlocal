@@ -31,7 +31,7 @@
 },
 {
         "name": "Ethel Wilson Harris",
-        "featureimage": "https://chapelonthedunes.org/wp-content/uploads/2019/01/Ethel-Wilson-San-Antonio-Evening-News-1919-p.3-Colors-on-Clay-277x400.jpg",
+        "featureimage": "./images/Ethel.jpg",
         "profileimage": "./images/image2.jpg",
         "bio": "" ,
         "link" :"details.html#artist5"
