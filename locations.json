@@ -281,6 +281,26 @@
             "postalCode": "78205",
             "state": "Texas"
           }
+        },
+        {
+          "type": "Feature",
+          "geometry": {
+            "type": "Point",
+            "coordinates": [
+              -98.41213660061439,
+              29.55534823658726
+            ]
+          },
+          "properties": {
+            "heading":"Songbirds of San Antonio",
+            "name":"Dixie Friend-Gay",
+            "address": "4135 Thousand Oaks Dr",
+            "image":"./images/songbirds.jpg",
+            "info": "https://www.dixiefriendgay.com/gallery-san-antonio-songbirds",
+            "city": "San Antonio",
+            "postalCode": "78217",
+            "state": "Texas"
+          }
         }
       ]
 }
