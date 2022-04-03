@@ -11,209 +11,237 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
     integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css2?family=Jaldi&family=Spartan&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Jaldi&family=Spartan&display=swap" rel="stylesheet">
   <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v1.11.1/mapbox-gl.css' rel='stylesheet' />
   <!-- Load the `mapbox-gl-geocoder` plugin. -->
-<script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.7.0/mapbox-gl-geocoder.min.js"></script>
-<link rel="stylesheet" href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.7.0/mapbox-gl-geocoder.css" type="text/css">
- 
-<!-- Promise polyfill script is required -->
-<!-- to use Mapbox GL Geocoder in IE 11. -->
-<script src="https://cdn.jsdelivr.net/npm/es6-promise@4/dist/es6-promise.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/es6-promise@4/dist/es6-promise.auto.min.js"></script>
+  <script
+    src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.7.0/mapbox-gl-geocoder.min.js"></script>
+  <link rel="stylesheet"
+    href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.7.0/mapbox-gl-geocoder.css" type="text/css">
+
+  <!-- Promise polyfill script is required -->
+  <!-- to use Mapbox GL Geocoder in IE 11. -->
+  <script src="https://cdn.jsdelivr.net/npm/es6-promise@4/dist/es6-promise.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/es6-promise@4/dist/es6-promise.auto.min.js"></script>
   <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700' rel='stylesheet'>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.6.3/dist/css/foundation.min.css"
     integrity="sha256-ogmFxjqiTMnZhxCqVmcqTvjfe1Y/ec4WaRj/aQPvn+I=" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
-    <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+  <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
   <link rel="stylesheet" href="style.css">
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-5CRTQG6HG1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
 
-  gtag('config', 'G-5CRTQG6HG1');
-</script>
+    gtag('config', 'G-5CRTQG6HG1');
+  </script>
   <title>Public Art of San Antonio</title>
   <meta property='og:title' content='San Antonio Local Art' />
-	<meta property="og:type" content="article" />
-	<meta property='og:image'
-		content='https://i.ibb.co/bBwcP2C/1-san-antonio-skyline-bleu-bri.jpg' />
-	<meta property='og:description' content='Locating San Antonio Public Art ' />
-	<meta property='og:url' content='https://sapublicart.netlify.app/' />
-	<meta property="fb:app_id" content="1798928430276281" />
-	<meta name="twitter:card" content="summary" />
-	<meta name="twitter:title" content="San Antonio Public Art">
-	<meta name="twitter:description" content="San Antonio Public Art Locator.">
-	<meta name="twitter:image"
-		content=" https://i.ibb.co/bBwcP2C/1-san-antonio-skyline-bleu-bri.jpg">
-	<meta name="twitter:card" content="summary_large_image">
+  <meta property="og:type" content="article" />
+  <meta property='og:image' content='https://i.ibb.co/bBwcP2C/1-san-antonio-skyline-bleu-bri.jpg' />
+  <meta property='og:description' content='Locating San Antonio Public Art ' />
+  <meta property='og:url' content='https://sapublicart.netlify.app/' />
+  <meta property="fb:app_id" content="1798928430276281" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="San Antonio Public Art">
+  <meta name="twitter:description" content="San Antonio Public Art Locator.">
+  <meta name="twitter:image" content=" https://i.ibb.co/bBwcP2C/1-san-antonio-skyline-bleu-bri.jpg">
+  <meta name="twitter:card" content="summary_large_image">
 
 </head>
 
 <body>
 
-  <nav >
+  <nav>
     <ul class="menu">
-      <li><a href="#about-hdr" >About</a></li>
+      <li><a href="#about-hdr">About</a></li>
       <li><a href="#map">Art Map</a></li>
       <li><a href="details.html">Local Artist
         </a>
-        <li><a href="artist.html">Artist Index</a></li>
+      <li><a href="artist.html">Artist Index</a></li>
       </li>
     </ul>
   </nav>
 
-  
-  <div class="container-banner" >
-    <img src="images/unnamed.png"/>
-      <h1 id="title">Public Art of San Antonio</h1>
+
+  <div class="container-banner">
+    <img src="images/unnamed.png" />
+    <h1 id="title">Public Art of San Antonio</h1>
   </div>
   <div class="card-section">
   </div>
-    <div class="row">
-      <div class="col-md-6">
-        <div class="map-ctn">
-          <div style="text-align: center; align-items:center; font-size:30px; display:flex; margin-left:35%;margin-right:35%;">
-            <i class="fa fa-arrow-down" style="color:black;"></i><label style="padding-right:10px; padding-left:10px; ">Pick a location!</label><i class="fa fa-arrow-down" style="color:black;"></i>
+  <div class="row">
+    <div class="col-md-6">
+      <div class="map-ctn">
+        <div
+          style="text-align: center; align-items:center; font-size:30px; display:flex; margin-left:35%;margin-right:35%;">
+          <i class="fa fa-arrow-down" style="color:black;"></i><label
+            style="padding-right:10px; padding-left:10px; ">Pick a location!</label><i class="fa fa-arrow-down"
+            style="color:black;"></i>
         </div>
         <div id='map' class='pad2'></div>
-     </div>
-        <div class="about-div" style="text-align:center">
-          <h4 class="about-hdr" id="about-hdr">About</h4>
-          <p class="about-p">This website was designed to create awareness of the San Antonio local art 
-                             scene, profiling local artist and public art found throughout the city. 
-          </p>
-          <label id="imagelabel" >Click image for location</lable>
-            <div>
-              <hr/>
-            </div>
+      </div>
+      <div class="about-div" style="text-align:center">
+        <h4 class="about-hdr" id="about-hdr">About</h4>
+        <p class="about-p">This website was designed to create awareness of the San Antonio local art
+          scene, profiling local artist and public art found throughout the city.
+        </p>
+        <label id="imagelabel">Click image for location</lable>
+          <div>
+            <hr />
+          </div>
           <section id="photos">
             <div id="listings2">
             </div>
           </section>
-        </div>
-          <div class="about-div" >
-            <h4 class="about-hdr" id="about-hdr">Other notable locations</h4>
-            <label style="text-align: center;">click image</label>
-          <div id="nlocations" >
-            <div id="listings3">
-              <div id="centered">
-              </div>
+      </div>
+      <div class="about-div">
+        <h4 class="about-hdr" id="about-hdr">Other notable locations</h4>
+        <label style="text-align: center;">click image</label>
+        <div id="nlocations">
+          <div id="listings3">
+            <div id="centered">
             </div>
-
           </div>
-        </div>
 
-        <div style="text-align:center; margin-top: 10%;">
-          <a href="https://www.artlocalsanantonio.wordpress.com">
-          <img src ="https://i.ibb.co/bBwcP2C/1-san-antonio-skyline-bleu-bri.jpg" alt="San Antonio Skyline" style="width:80%;  height:200px; max-width:600px;">
+        </div>
+      </div>
+
+      <div style="text-align:center; margin-top: 10%;">
+        <a href="https://www.artlocalsanantonio.wordpress.com">
+          <img src="https://i.ibb.co/bBwcP2C/1-san-antonio-skyline-bleu-bri.jpg" alt="San Antonio Skyline"
+            style="width:80%;  height:200px; max-width:600px;">
           <p style="color:black">
             Check out my news blog for this site...</p>
-          </a>
-        </div>
-
+        </a>
       </div>
-
-      <div class="col-md-6">
-        <div id='listings' class='listings'>
-          <h2 style="text-align: center;">San Antonio Public Art </h2>
-          <div style="font-size:30px; display:flex; width:50%; margin: auto auto">
-            <i class="fa fa-arrow-down" style="color:black;"></i><label style="padding-right:10px; padding-left:10px; ">Click on address</label><i class="fa fa-arrow-down" style="color:black;"></i>
-          </div>
-        </div>
-      </div>
-      </div>
-
-
-        <div class="row"  id="pic-col">
-          <div class="col-9 col-6">
-              <div class="card"  height="900px;">
-                  <div class="swiper-container">
-                    <div class="swiper-wrapper">
-                      <div class="swiper-slide">
-                        <img src="./images/songbirdsbig.jpg"/>
-                        <div class="center">  <a href="#"><h4 class="artname">Songbirds of San Antonio</h4></a></div>
-                      </div>
-
-                      <div class="swiper-slide">
-                        <img src="./images/cover1.jpg"/>
-                        <div class="center">  <a href="#"><h4 class="artname">Eastside is Love</h4></a></div>
-                      </div>
-
-                      <div class="swiper-slide">
-                        <img src="./images/cover2.jpg"/>
-                        <div class="center">  <a href="details.html#artist1"><h4 class="artname">Our Lady Guadalupe</h4></a></div>
-                      </div>
-
-                      <div class="swiper-slide">
-                        <img src="./images/cover3.jpg"/>
-                        <div class="center">  <a href="#"><h4 class="artname">Brighter Days</h4></a></div>
-                      </div>
-
-                      <div class="swiper-slide">
-                        <img src="./images/cover4.jpg"/>
-                        <div class="center">  <a href="details.html#artist2"><h4 class="artname">Luminarias Mural</h4></a></div>
-                      </div>
-
-                      <div class="swiper-slide">
-                        <img src="./images/cover5.jpg"/>
-                        <div class="center">  <a href="details.html#artist2"><h4 class="artname">Los Otros Mural</h4></a></div>
-
-    
-                      </div>
-                      <div class="swiper-slide">
-                        <img src="./images/cover6.jpg"/>
-                        <div class="center">  <a href="details.html#artist2"><h4 class="artname">Los Otros Mural</h4></a></div>
-
-    
-                      </div>
-                      <div class="swiper-slide">
-                        <img src="./images/cover7.jpg"/>
-                        <div class="center">  <a href="details.html#artist2"><h4 class="artname">Los Otros Mural</h4></a></div>
-
-
-                      </div>
-                      <div class="swiper-slide">
-                      <img src="./images/cover8.jpg"/>
-                      <div class="center">  <a href="#"><h4 class="artname">by:Adriana M. Garcia</h4></a></div>
-
-                    </div>
-                      <div class="swiper-slide">
-                      <img src="./images/cover9.jpg"/>
-                      <div class="center">  <a href="#"><h4 class="artname">Selena Mural</h4></a></div>
-
-                    </div>
-                      <div class="swiper-slide">
-                      <img src="./images/cover10.jpg"/>
-                      <div class="center">  <a href="#"><h4 class="artname">Spirit Of Healing</h4></a></div>
-
-                    </div>
-                    </div>
-                    <!-- Add Pagination -->
-                    <div class="swiper-pagination"></div>
-                    <!-- Add Arrows -->
-                    <div class="swiper-button-next"></div>
-                    <div class="swiper-button-prev"></div>
-                  </div>
-                </div>
-          </div>
 
     </div>
 
-  </body>
+    <div class="col-md-6">
+      <div id='listings' class='listings'>
+        <h2 style="text-align: center;">San Antonio Public Art </h2>
+        <div style="font-size:30px; display:flex; width:50%; margin: auto auto">
+          <i class="fa fa-arrow-down" style="color:black;"></i><label
+            style="padding-right:10px; padding-left:10px; ">Click on address</label><i class="fa fa-arrow-down"
+            style="color:black;"></i>
+        </div>
+      </div>
+    </div>
+  </div>
 
-  <footer>
-    <ul class="footer">
-      <li class="li-foot"> <a href="#about-hdr">About</a></li>
-      <li class="li-foot"><a href="#map">Art Map</a></li>
-      <li class="li-foot"><a href="details.html">Local Artist
-      <li class="li-foot"><a href="artist.html">Artist Index</a></li>
-    </ul>
-  </footer>
+
+  <div class="row" id="pic-col">
+    <div class="col-9 col-6">
+      <div class="card" height="900px;">
+        <div class="swiper-container">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img src="./images/songbirdsbig.jpg" />
+              <div class="center"> <a href="#">
+                  <h4 class="artname">Songbirds of San Antonio</h4>
+                </a></div>
+            </div>
+
+            <div class="swiper-slide">
+              <img src="./images/cover1.jpg" />
+              <div class="center"> <a href="#">
+                  <h4 class="artname">Eastside is Love</h4>
+                </a></div>
+            </div>
+
+            <div class="swiper-slide">
+              <img src="./images/cover2.jpg" />
+              <div class="center"> <a href="details.html#artist1">
+                  <h4 class="artname">Our Lady Guadalupe</h4>
+                </a></div>
+            </div>
+
+            <div class="swiper-slide">
+              <img src="./images/cover3.jpg" />
+              <div class="center"> <a href="#">
+                  <h4 class="artname">Brighter Days</h4>
+                </a></div>
+            </div>
+
+            <div class="swiper-slide">
+              <img src="./images/cover4.jpg" />
+              <div class="center"> <a href="details.html#artist2">
+                  <h4 class="artname">Luminarias Mural</h4>
+                </a></div>
+            </div>
+
+            <div class="swiper-slide">
+              <img src="./images/cover5.jpg" />
+              <div class="center"> <a href="details.html#artist2">
+                  <h4 class="artname">Los Otros Mural</h4>
+                </a></div>
+
+
+            </div>
+            <div class="swiper-slide">
+              <img src="./images/cover6.jpg" />
+              <div class="center"> <a href="details.html#artist2">
+                  <h4 class="artname">Los Otros Mural</h4>
+                </a></div>
+
+
+            </div>
+            <div class="swiper-slide">
+              <img src="./images/cover7.jpg" />
+              <div class="center"> <a href="details.html#artist2">
+                  <h4 class="artname">Los Otros Mural</h4>
+                </a></div>
+
+
+            </div>
+            <div class="swiper-slide">
+              <img src="./images/cover8.jpg" />
+              <div class="center"> <a href="#">
+                  <h4 class="artname">by:Adriana M. Garcia</h4>
+                </a></div>
+
+            </div>
+            <div class="swiper-slide">
+              <img src="./images/cover9.jpg" />
+              <div class="center"> <a href="#">
+                  <h4 class="artname">Selena Mural</h4>
+                </a></div>
+
+            </div>
+            <div class="swiper-slide">
+              <img src="./images/cover10.jpg" />
+              <div class="center"> <a href="#">
+                  <h4 class="artname">Spirit Of Healing</h4>
+                </a></div>
+
+            </div>
+          </div>
+          <!-- Add Pagination -->
+          <div class="swiper-pagination"></div>
+          <!-- Add Arrows -->
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</body>
+
+<footer>
+  <ul class="footer">
+    <li class="li-foot"> <a href="#about-hdr">About</a></li>
+    <li class="li-foot"><a href="#map">Art Map</a></li>
+    <li class="li-foot"><a href="details.html">Local Artist
+    <li class="li-foot"><a href="artist.html">Artist Index</a></li>
+  </ul>
+</footer>
 
 
 <script>
