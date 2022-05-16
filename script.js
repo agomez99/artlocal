@@ -368,7 +368,6 @@ fetch("./locations.json")
       data.features.forEach(function (store, i) {
         var prop = store.properties;
         console.log(prop);
-        /* Add a new listing section to the sidebar. */
         var listings3 = document.getElementById("listings3");
         var listings3 = listings3.appendChild(document.createElement("div"));
 
@@ -377,7 +376,7 @@ fetch("./locations.json")
         link3.className = "title";
         link3.id = "link3-" + prop.id;
 
-        var feattext = listings3.appendChild(document.createElement("p"));
+        var feattext = listings3.appendChild(document.createElement("p4"));
         listings3.appendChild(feattext);
         feattext.className = "feattext";
         feattext.innerHTML = prop.name;
