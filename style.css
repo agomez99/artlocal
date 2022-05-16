@@ -582,6 +582,7 @@ p.artist-header{
   display:block;
   color:white;
   text-align: center;
+  font-size: 25px;
 }
 
 .centered:hover {
