@@ -12,11 +12,15 @@ body {
   color: white;
   background-color: rgb(241, 72, 241);
 }
+.btn:hover{
+  color:white;
+  background-color: rgb(136, 0, 232);
+}
 a.btn{
   display: block;
   margin-left: 10%;
   margin-right:10%;
-  color:rgb(108, 14, 170);
+  color:rgb(152, 1, 253);
   border-color: rgb(108, 14, 170);
   background-color: rgb(255, 255, 255);
 }
