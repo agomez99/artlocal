@@ -27,6 +27,7 @@ for (var i = 0; i < data.length; i++) {
 
     var link = document.createElement("a");
     link.href = data[i].link ;
+    link.className = "artisttext"
     link.innerHTML =  data[i].name ;
 
 

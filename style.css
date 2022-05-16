@@ -596,7 +596,10 @@ p.artist-header{
   list-style: none;
 }
 
-
+.artisttext:hover{
+font-size: 26px;
+text-decoration: none;
+}
 
 /* ----------- iPhone X ----------- */
 
