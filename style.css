@@ -536,7 +536,7 @@ p.artist-header{
 /*--------------------------------------*/
 
 #photos {
-  display: block;
+  display: inline-block;
   /* Prevent vertical gaps */
   padding:10px;
   padding-top: 5px;
