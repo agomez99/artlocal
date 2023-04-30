@@ -169,6 +169,7 @@ fetch("./locations.json")
 
       let hoveredStateId = null;
       map.on("mousemove", "locations", (e) => {
+        
         if (e.features.length > 0) {
           if (hoveredStateId !== null) {
             map.setFeatureState(
