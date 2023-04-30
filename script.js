@@ -5,11 +5,9 @@ if (!("remove" in Element.prototype)) {
     }
   };
 }
-//var token = process.env.APIMAPBOXTOKEN
 mapboxgl.accessToken =
   "pk.eyJ1IjoiYWdvbWV6ZGV2IiwiYSI6ImNrY3JiNjlreTFkM2QyeXM1NG4xODA2anYifQ.t9njpH24eFVIczJo7N3RVQ";
 
-//mapboxgl.accessToken = process.env.APIMAPBOXTOKEN;
 
 var map = new mapboxgl.Map({
   container: "map",
@@ -108,17 +106,7 @@ var poplocations = {
 poplocations.features.forEach(function (store, i) {
   store.properties.id = i;
 });
-//   var xFile;
 
-// var requestX = $.getJSON("sublocations.json", function(json){
-//     xFile = json;
-// });
-
-// $.when(requestX).then(function(){
-//    // do something;
-//    // this function only gets called when both requestX & requestY complete.
-//    console.log(xFile)
-// });
 
 fetch("./locations.json")
   .then((response) => {
@@ -149,7 +137,10 @@ fetch("./locations.json")
       map.addSource("places", {
         type: "geojson",
         data: artlocations,
+        generateId: true // This ensures that all features have unique IDs
+
       });
+      
 
       /* Circle marker layer */
 
@@ -171,6 +162,8 @@ fetch("./locations.json")
         source: {
           type: "geojson",
           data: poplocations,
+          generateId: true // This ensures that all features have unique IDs
+
         },
       });
 
@@ -280,133 +273,138 @@ fetch("./locations.json")
     }
 
     function buildLocationList(data) {
-      data.features.forEach(function (store, i) {
-        var prop = store.properties;
-
-        /* Add a new listing section to the sidebar. */
-        var listings = document.getElementById("listings");
+      // Changed the "forEach" loop to a "for" loop for better performance
+      for (let i = 0; i < data.features.length; i++) {
+        const prop = data.features[i].properties;
+    
+        // Add a new listing section to the sidebar
+        const listings = document.getElementById("listings");
         listings.appendChild(document.createElement("hr"));
-
-        var listing = listings.appendChild(document.createElement("div"));
-        /* Assign a unique `id` to the listing. */
-        listing.id = "listing-" + prop.id;
-        /* Assign the `item` class to each listing for styling. */
-        listing.className = "item";
-
-        var image = listing.appendChild(document.createElement("img"));
+    
+        // Create a new div for the listing
+        const listing = document.createElement("div");
+        listing.id = `listing-${prop.id}`;
+           listing.className = "item";
+    
+        // Add the image to the listing
+        const image = document.createElement("img");
         image.src = prop.image;
         image.className = "images1";
-
-        /* Add the link to the individual listing created above. */
-        var link = listing.appendChild(document.createElement("a"));
+        listing.appendChild(image);
+    
+        // Add the link to the individual listing created above
+        const link = document.createElement("a");
         link.href = "#";
         link.className = "title";
-        link.id = "link-" + prop.id;
+        link.id = `link-${prop.id}`;
         link.innerHTML = prop.address;
-
-        listing.appendChild(document.createElement("br"));
-
-        var name = listing.appendChild(document.createElement("div"));
+        listing.appendChild(link);
+    
+        // Add the heading and name to the listing
+        const name = document.createElement("div");
         name.innerHTML = prop.heading;
         name.className = "name";
-        link.appendChild(image);
         link.appendChild(name);
-
-        var artist = listing.appendChild(document.createElement("div"));
+    
+        const artist = document.createElement("div");
         artist.innerHTML = prop.name;
         artist.className = "artist";
         link.appendChild(artist);
-
-        //new pic grid
-        var listings2 = document.getElementById("listings2");
-        var listing2 = listings2.appendChild(document.createElement("div"));
-
-        var link2 = listing2.appendChild(document.createElement("a"));
+    
+        // Add the click event listener for the link to fly to store and create pop up
+        link.addEventListener("click", function (e) {
+          const clickedListing = data.features[i];
+          flyToStore(clickedListing);
+          createPopUp(clickedListing);
+    
+          const activeItem = document.getElementsByClassName("active");
+          if (activeItem[0]) {
+            activeItem[0].classList.remove("active");
+          }
+          this.parentNode.classList.add("active");
+        });
+    
+        // Add the new pic grid
+        const listings2 = document.getElementById("listings2");
+        const listing2 = document.createElement("div");
+        listing2.id = `listing2-${prop.id}`;
+        listing2.className = "item";
+    
+        const link2 = document.createElement("a");
         link2.href = "#";
         link2.className = "title";
-        link2.id = "link2-" + prop.id;
-
-        var image2 = listing2.appendChild(document.createElement("img"));
-        listing2.id = "listing2-" + prop.id;
-        listing2.className = "item";
+        link2.id = `link2-${prop.id}`;
+        listing2.appendChild(link2);
+    
+        const image2 = document.createElement("img");
         image2.src = prop.image;
         image2.className = "images";
         link2.appendChild(image2);
         listing2.appendChild(link2);
-        link.addEventListener("click", function (e) {
-          for (var i = 0; i < data.features.length; i++) {
-            if (this.id === "link-" + data.features[i].properties.id) {
-              var clickedListing = data.features[i];
-              flyToStore(clickedListing);
-              createPopUp(clickedListing);
-            }
-          }
-          var activeItem = document.getElementsByClassName("active");
-          if (activeItem[0]) {
-            activeItem[0].classList.remove("active");
-          }
-          this.parentNode.classList.add("active");
-        });
+    
+        // Add the click event listener for the link to fly to store and create pop up
         link2.addEventListener("click", function (e) {
-          for (var i = 0; i < data.features.length; i++) {
-            if (this.id === "link2-" + data.features[i].properties.id) {
-              var clickedListing = data.features[i];
-              flyToStore(clickedListing);
-              createPopUp(clickedListing);
-            }
-          }
-          var activeItem = document.getElementsByClassName("active");
+          const clickedListing = data.features[i];
+          flyToStore(clickedListing);
+          createPopUp(clickedListing);
+    
+          const activeItem = document.getElementsByClassName("active");
           if (activeItem[0]) {
             activeItem[0].classList.remove("active");
           }
           this.parentNode.classList.add("active");
         });
-      });
+    
+        // Append the listings to the corresponding divs
+        listings.appendChild(listing);
+        listings2.appendChild(listing2);
+      }
     }
+    
     //Notable locations being added to the map
     function buildLocationList2(data) {
-      data.features.forEach(function (store, i) {
-        var prop = store.properties;
-        console.log(prop);
-        var listings3 = document.getElementById("listings3");
-        var listings3 = listings3.appendChild(document.createElement("div"));
-
-        var link3 = listings3.appendChild(document.createElement("a"));
-        link3.href = "#";
-        link3.className = "title";
-        link3.id = "link3-" + prop.id;
-
-        var feattext = listings3.appendChild(document.createElement("p4"));
-        listings3.appendChild(feattext);
-        feattext.className = "feattext";
-        feattext.innerHTML = prop.name;
-        console.log(feattext);
-
-        var image3 = listings3.appendChild(document.createElement("img"));
-        listings3.id = "listing3-" + prop.id;
-        listings3.className = "item2";
-        image3.src = prop.image;
-        image3.className = "images2";
-
-        link3.appendChild(image3);
-        listings3.appendChild(link3);
-
-        link3.addEventListener("click", function (e) {
-          for (var i = 0; i < data.features.length; i++) {
-            if (this.id === "link3-" + data.features[i].properties.id) {
-              var clickedListing = data.features[i];
+      data.features.forEach(function(store) {
+          const prop = store.properties;
+  
+          const listings3 = document.getElementById("listings3");
+          const listItem3 = document.createElement("div");
+          listItem3.id = `listing3-${prop.id}`;
+          listItem3.className = "item2";
+          listings3.appendChild(listItem3);
+  
+          const link3 = document.createElement("a");
+          link3.href = "#";
+          link3.className = "title";
+          link3.id = `link3-${prop.id}`;
+          listItem3.appendChild(link3);
+  
+          const image3 = document.createElement("img");
+          image3.src = prop.image;
+          image3.className = "images2";
+          link3.appendChild(image3);
+  
+          const feattext = document.createElement("p");
+          feattext.className = "feattext";
+          feattext.innerHTML = prop.name;
+          listItem3.appendChild(feattext);
+  
+          link3.addEventListener("click", function() {
+              const clickedListing = data.features.find(function(feature) {
+                  return feature.properties.id === prop.id;
+              });
+  
               flyToStore(clickedListing);
               createPopUp(clickedListing);
-            }
-          }
-          var activeItem = document.getElementsByClassName("active");
-          if (activeItem[0]) {
-            activeItem[0].classList.remove("active");
-          }
-          this.parentNode.classList.add("active");
-        });
+  
+              const activeItem = document.querySelector(".active");
+              if (activeItem) {
+                  activeItem.classList.remove("active");
+              }
+              listItem3.classList.add("active");
+          });
       });
-    }
+  }
+  
     /**
      * Use Mapbox GL JS's `flyTo` to move the camera smoothly
      * a given center point.
@@ -420,46 +418,29 @@ fetch("./locations.json")
         zoom: 14,
       });
     }
+    
     function createPopUp(currentFeature) {
       var popUps = document.getElementsByClassName("mapboxgl-popup");
-      /** Check if there is already a popup on the map and if so, remove it */
       if (popUps[0]) popUps[0].remove();
-
-      var popup = new mapboxgl.Popup({
-        closeOnClick: true,
-        offset: [200, -200],
-        
-      })
-
+    
+      var popup = new mapboxgl.Popup({ closeOnClick: true, offset: [200, -200]})
         .setLngLat(currentFeature.geometry.coordinates)
         .setHTML(
-          '<img  class="map-img" src=' +
-            currentFeature.properties.image +
-            "></img>" +
-            '<p class="map-address">' +
-            currentFeature.properties.address +
-            "</p>" +
-            '<p class="map-artist">' +
-            currentFeature.properties.heading +
-            '<p class="artist-header" >ARTIST</p>' +
-            '<p class="map-artist">' +
-            currentFeature.properties.name +
-            "</p>" +
-            '<a  class="btn" href=' +
-            currentFeature.properties.info +
-            ">MORE INFO</a>"
+          '<img  class="map-img" src=' + currentFeature.properties.image +'></img>' +
+          '<p class="map-address">' + currentFeature.properties.address + '</p>' +
+          '<p class="map-artist">' + currentFeature.properties.heading +
+          '<p class="artist-header" >ARTIST</p>' +
+          '<p class="map-artist">' + currentFeature.properties.name + '</p>' +
+          '<a  class="btn" href=' + currentFeature.properties.info + '>MORE INFO</a>'
         )
         .addTo(map);
     }
-
+     
     map.addControl(
       new MapboxGeocoder({
         accessToken: mapboxgl.accessToken,
-        mapboxgl: mapboxgl,
+        mapboxgl: mapboxgl
       }),
-      "top-right"
+      'top-right'
     );
   })
-  .catch((err) => {
-    // Do something for an error here
-  });
